@@ -8,17 +8,21 @@ import { AccueilComponent } from './pages/accueil/accueil.component';
 import { AproposComponent } from './pages/apropos/apropos.component';
 import { MenuComponent } from './pages/menu/menu.component';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    AccueilComponent,
+    AproposComponent,
+    MenuComponent,
+ 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NavbarComponent,
-    AccueilComponent,
-    AproposComponent,
-    MenuComponent
+  
+
 
   ],
   providers: [],
