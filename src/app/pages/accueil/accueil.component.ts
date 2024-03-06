@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-accueil',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './accueil.component.css'
 })
 export class AccueilComponent {
-
+  ngAfterViewInit() {
+    AOS.init();
+  }
+  
 }
+
+

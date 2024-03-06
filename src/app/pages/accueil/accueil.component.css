@@ -1,74 +1,159 @@
 #background-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-    z-index: -1;
-  }
+  position: fixed;
+  filter: brightness(37%);
+-webkit-filter: brightness(37%);
+-moz-filter: brightness(37%);
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -1;
+}
 
 .toppageacc{
-    text-align: center;
-    align-items: center;
-    color: #fff;
+  text-align: center;
+  align-items: center;
+  color: #fff;
 }
+
 .logo_accueil {
-    display: block;
+  display: block;
+  margin-left: 950px;
+  margin-top: -246px;
+  padding-top: 43px;
+  margin-right: auto;
+  width: 25%;
+  max-width: 50%;
+  height: auto;;
+}
+
+
+.button {
+  position: relative;
+  border-radius: 23px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.6);
+  appearance: none;
+  background-color: #ffffffa6;
+  font-size: 25px;
+  box-sizing: border-box;
+  color: #0B2568;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "GenEi", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 3.75em;
+  min-width: 0;
+  outline: none;
+  padding: 1em 2.3em;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+  width: 310px;
+    height: 118px;
+    margin-left: -884px;
+    margin-right: auto;
+    top: -128px;
+    z-index: 10;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transform: translateY(-3px);
+  backdrop-filter: blur(0px);
+}
+
+.button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+
+.titreac1{
+  font-family: "GenEi", sans-serif;
+  color: #ffffff;
+  font-size: 50px;
+  margin-top: 235px;
+  margin-left: 156px;
+  margin-right: auto;
+  z-index: 10;
+}
+
+.titreac2{
+  color: #ffffff;
+font-family: 'Arial', sans-serif;
+font-size: 30px;
+margin-left: 156px;
+margin-right: auto;
+letter-spacing: 3.6px;
+}
+
+
+/* Styles pour les écrans de taille moyenne */
+@media (max-width: 992px) {
+  .logo_accueil {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .button {
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+  }
+
+  .titreac1 {
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .titreac2 {
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Styles pour les écrans de petite taille */
+@media (max-width: 768px) {
+  .logo_accueil {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 50%;
-    height: auto;
   }
-  
-  @media (max-width: 768px) {
-    .logo_accueil {
-      max-width: 250px;
-    }
-  }
-
-
-
 
   .button {
-    border-radius: 23px;
-
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-backdrop-filter: blur(10px);
-background: rgba(255, 255, 255, 0.6);
-
-    appearance: none;
-    background-color: #ffffffa6;
-    box-sizing: border-box;
-    color: #000000;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 0;
-    min-height: 3.75em;
-    min-width: 0;
-    outline: none;
-    padding: 1em 2.3em;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    will-change: transform;
-    width: 373px;
-    height: 154px;
+    width: 100%;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
-    top: -486px;
-    z-index: 3;
-   }
-   
-   
-   
-   .button:active {
-    box-shadow: none;
-    transform: translateY(0);
-   }
+    top: 0;
+  }
+
+  .titreac1 {
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .titreac2 {
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -28,7 +28,23 @@
     font-style: italic;
     font-display: swap;
   }
+
+  @font-face {
+    font-family: 'GenEi';
+    src: url('./assets/ressources/font/GenEiLateMinP_v2.woff2') format('woff2'),
+        url('./assets/ressources/font/GenEiLateMinP_v2.woff') format('woff'),
+        url('./assets/ressources/font/GenEiLateMinP_v2.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@import '~aos/dist/aos.css';
   
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
+
+
+
+  
