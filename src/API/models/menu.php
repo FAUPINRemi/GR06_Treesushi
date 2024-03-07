@@ -60,15 +60,7 @@ class Menu
             $stmt_insert_saveur->execute();
         }
 
-        // Insérer les saveurs spécifiées
-        // foreach ($data['saveurs'] as $saveur) {
-        //     $sql_insert_saveur = "INSERT INTO commander (id_saveur, id_menu) 
-        //                         SELECT saveur.id, :menu_id FROM saveur";
-        //     $stmt_insert_saveur = $this->connexion->prepare($sql_insert_saveur);
-        //     $stmt_insert_saveur->bindParam(':menu_id', $menu_id);
-        //     $stmt_insert_saveur->bindParam(':nom', $saveur['nom']);
-        //     $stmt_insert_saveur->execute();
-        // }
+
 
         return true; // Succès
 
@@ -146,16 +138,35 @@ class Menu
     }
     public function delete() // Méthode pour supprimer un menu
     {
+        $menu_id = $this->id; // Utilisez l'ID du menu défini dans la requête DELETE
+
+        // Supprimer les aliments associés au menu
+        $sql_delete_aliment = "DELETE FROM contenir WHERE id_menu = :id_menu";
+        $stmt_delete_aliment = $this->connexion->prepare($sql_delete_aliment);
+        $stmt_delete_aliment->bindParam(':id_menu', $menu_id);
+        $stmt_delete_aliment->execute();
+
+        // Supprimer les saveurs associées au menu
+        $sql_delete_saveur = "DELETE FROM commander WHERE id_menu = :id_menu";
+        $stmt_delete_saveur = $this->connexion->prepare($sql_delete_saveur);
+        $stmt_delete_saveur->bindParam(':id_menu', $menu_id);
+        $stmt_delete_saveur->execute();
+
+        // Supprimer le menu
         $sql = "DELETE FROM $this->table WHERE id = :id";
-        $stmt = $this->connexion->prepare($sql);
-        $stmt->bindParam(':id', $this->id);
-        $stmt->execute();
+        $stmt_menu = $this->connexion->prepare($sql);
+        $stmt_menu->bindParam(':id', $menu_id);
+        $stmt_menu->execute();
+
+        // Vérifiez si le menu a été supprimé
+        if ($stmt_menu->rowCount() > 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
-
-
-
-  /*
+/*
    * CREATE TABLE IF NOT EXISTS `menu` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) DEFAULT NULL,
