@@ -14,20 +14,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $menu = new Menu($connexion);
 
-    $data = json_decode(file_get_contents("php://input"));
+    $data = json_decode(file_get_contents("php://input"), true);
 
-    if (!isset($data->nom, $data->pieces, $data->prix, $data->image)) {
+    if (!isset($data['nom'], $data['pieces'], $data['prix'], $data['img'], $data['aliments'], $data['saveurs'])) {
         http_response_code(400);
         echo json_encode(["message" => "Impossible de créer le menu. Les données sont incomplètes"]);
         exit();
     }
 
-    $menu->nom = $data->nom;
-    $menu->pieces = $data->pieces;
-    $menu->prix = $data->prix;
-    $menu->image = $data->image;
-
-    if ($menu->create()) {
+    if ($menu->create($data)) {
         http_response_code(201);
         echo json_encode(["message" => "Menu créé"]);
     } else {
@@ -38,4 +33,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     http_response_code(400);
     echo json_encode(["message" => "Méthode non autorisée"]);
 }
-?>

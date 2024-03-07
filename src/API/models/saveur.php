@@ -1,17 +1,20 @@
 <?php
 
-class Saveur{
+class Saveur
+{
     public $id;
     public $nom;
 
     private $connexion;
     private $table = __CLASS__;
 
-    function __construct($connexion){
+    function __construct($connexion)
+    {
         $this->connexion = $connexion;
     }
 
-    public function create(){
+    public function create()
+    {
         $sql = "INSERT INTO $this->table (nom) VALUES (:nom)";
         $stmt = $this->connexion->prepare($sql);
         $stmt->bindParam(':nom', $this->nom);
@@ -22,14 +25,16 @@ class Saveur{
         }
     }
 
-    public function read(){
+    public function read()
+    {
         $sql = "SELECT * FROM $this->table";
         $stmt = $this->connexion->prepare($sql);
         $stmt->execute();
         return $stmt;
     }
 
-    public function readOne(){
+    public function readOne()
+    {
         $sql = "SELECT * FROM $this->table WHERE id = :id";
         $stmt = $this->connexion->prepare($sql);
         $stmt->bindParam(':id', $this->id);
@@ -37,7 +42,8 @@ class Saveur{
         return $stmt;
     }
 
-    public function update(){
+    public function update()
+    {
         $sql = "UPDATE $this->table SET nom = :nom WHERE id = :id";
         $stmt = $this->connexion->prepare($sql);
         $stmt->bindParam(':id', $this->id);
@@ -50,11 +56,17 @@ class Saveur{
         }
     }
 
-    public function delete(){
+    public function delete()
+    {
         $sql = "DELETE FROM $this->table WHERE id = :id";
         $stmt = $this->connexion->prepare($sql);
         $stmt->bindParam(':id', $this->id);
         $stmt->execute();
+        if ($stmt->rowCount() > 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 

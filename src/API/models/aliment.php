@@ -1,6 +1,7 @@
 <?php
 
-class Aliment {
+class Aliment
+{
     public $id;
     public $nom;
 
@@ -83,5 +84,10 @@ class Aliment {
         $stmt = $this->connexion->prepare($sql);
         $stmt->bindParam(':id', $this->id);
         $stmt->execute();
+        if ($stmt->rowCount() > 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

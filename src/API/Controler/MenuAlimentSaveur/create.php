@@ -16,25 +16,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $data = json_decode(file_get_contents("php://input"));
 
-    if (!isset($data->id_menu) || !isset($data->id_aliment) || !isset($data->id_saveur)) {
+    if (!empty($data->id_menu) || !empty($data->id_aliment) || !empty($data->id_saveur)) {
+
+        $menu->id_menu = $data->id_menu;
+        $menu->id_aliment = $data->id_aliment;
+        $menu->id_saveur = $data->id_saveur;
+
+
+        if ($menu->create()) {
+            http_response_code(201);
+            echo json_encode(["message" => "Menu créé"]);
+        } else {
+            http_response_code(503);
+            echo json_encode(["message" => "Impossible de créer le menu"]);
+        }
+    } else {
         http_response_code(400);
         echo json_encode(["message" => "Impossible de créer le menu. Les données sont incomplètes"]);
-        exit();
-    }
-
-    $menu->id_menu = $data->id_menu;
-    $menu->id_aliment = $data->id_aliment;
-    $menu->id_saveur = $data->id_saveur;
-
-    if ($menu->create()) {
-        http_response_code(201);
-        echo json_encode(["message" => "Menu créé"]);
-    } else {
-        http_response_code(503);
-        echo json_encode(["message" => "Impossible de créer le menu"]);
     }
 } else {
     http_response_code(400);
     echo json_encode(["message" => "Méthode non autorisée"]);
 }
-?>

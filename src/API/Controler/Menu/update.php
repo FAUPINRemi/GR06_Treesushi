@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "PUT") {
     $menu->nom = isset($data->nom) ? $data->nom : null;
     $menu->pieces = isset($data->pieces) ? $data->pieces : null; // Corrected here
     $menu->prix = isset($data->prix) ? $data->prix : null;
-    $menu->image = isset($data->image) ? $data->image : null;
+    $menu->img = isset($data->img) ? $data->img : null;
 
     if ($menu->update()) {
         http_response_code(200);

@@ -1,13 +1,13 @@
 <?php
 class Database
 {
-    private $serveur="localhost";
+    private $serveur = "localhost";
     private $utilisateur = "root";
     private $mot_de_passe  = "";
-    private $base_de_donnees = "testapi2";
+    private $base_de_donnees = "testapi3";
     public $connexion;
 
-   
+
 
     public function GetConnection()
     {
@@ -21,7 +21,6 @@ class Database
         }
 
         return $this->connexion;
-    
     }
 
     public function close()
@@ -39,4 +38,3 @@ class Database
         return $this->connexion->real_escape_string($string);
     }
 }
-
