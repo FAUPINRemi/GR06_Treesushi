@@ -1,25 +1,130 @@
-
-
 <video autoplay muted loop id="background-video">
-    <source src="../../../assets/ressources/video/videoillustration_treesushi.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
-  </video>
-  <h1 class="titreac1" data-aos="fade-up"
-  data-aos-duration="3000">Bienvenue chez Treesushi.</h1>
-  <h3 class="titreac2">Restaurant et traiteur asiatique depuis 2015</h3>
-  <div class="toppageacc" data-aos="fade-up"
-  data-aos-duration="3000">
-    <img class="logo_accueil" src="../../../assets/ressources/img/logov1_treesushi.png" alt="logo_treesushi" data-aos="fade-up"
-        data-aos-duration="3000">
-    <div class="content_accueil_1">
-      
-        <button class="button" data-aos="fade-up"
-        data-aos-duration="3000">
-            Demander le menu !
-        </button>
+  <source src="../../../assets/ressources/video/videoillustration_treesushi.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+<div class="flex pl-8 -pt4">
+  <div class="ml-4  w-3/4">
+<h1 class="titreac1" data-aos="fade-up"
+data-aos-duration="1500">Bienvenue chez Treesushi.</h1>
+<h3 class="titreac2" data-aos="fade-up"
+data-aos-duration="3000">Restaurant et traiteur asiatique depuis 2015</h3>
+</div>
+<div class="toppageacc  w-3/4" >
+<img class="logo_accueil" src="../../../assets/ressources/img/logov1_treesushi.png" alt="logo_treesushi" data-aos="fade-left"
+    data-aos-duration="3000">
 
-        
+  </div>
+</div>
+<div class="content_accueil_1 pl-8">
+  
+  <button class="button" data-aos="fade-up"
+  data-aos-duration="3000">
+      Demander le menu !
+  </button>        
+</div>
+<div class="vide"></div>
+<div class="container_info">
+  <div class="contentinfo">
+    <div class="slider">
+      <div class="slide" *ngFor="let slide of slides; let i = index" [ngStyle]="{'display': i === currentSlide ? 'block' : 'none'}">
+        <div class="row">
+          <div class="col position-relative"> 
+            <img [src]="slide.image" class="img_slide" data-aos="zoom-in" data-aos-duration="1500">
+            <div class="slider-controls" data-aos="zoom-in" data-aos-duration="3000"> 
+              <button class="prev" (click)="prevSlide()">--></button>
+              <button class="next" (click)="nextSlide()"><---</button>
+            </div>
+          </div>
+          <div class="col">
+            <h3 class="titre_slide" data-aos="fade-up"
+            data-aos-duration="1500">{{slide.title}}</h3>
+            <p class="paragraphe_slide"  data-aos="fade-left"
+            data-aos-duration="3000">{{slide.text}}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   
+  <div class="container_menu items-center justify-center mx-auto min-h-screen ">
+    <h3 class="text_menu_container pt-20 pb-4 text-center text-5xl text-white">Nos menus</h3>
+    <div class="div2menuacc flex items-center justify-center mx-auto min-h-screen -mt6 -pt6">
+  <div class="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md scale-80">
+    <div class="relative mx-4 -mt-6 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
+      <img src="../../../assets/ressources/img/menu/fresh-mix.jpg" alt="menu_freshmix">
+    </div>
+    <div class="p-6">
+      <h5 class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased text-center">
+       Fresh Mix
+      </h5>
+      <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+      La plus fresh de nos box. 
+      </p>
+    </div>
+    <div class="p-6 pt-0">
+      <button data-ripple-light="true" type="button" class="select-none rounded-lg bg-dark py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none text-white">
+        Commander
+      </button>
+      <div class="col position-relative ml-10">
+        <p class="absolute bottom-0 right-0  block font-sans text-xs font-light leading-relaxed text-inherit antialiased underline">
+            En savoir plus sur le produit. 
+        </p>
+    </div>
+  </div>
+    </div>
+    <div class="relative flex w-full sm:w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md scale-80">
+      <div class="relative mx-4 -mt-6 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
+        <img src="../../../assets/ressources/img/menu/master-mix.jpg" alt="menu_freshmix">
+      </div>
+      <div class="p-6">
+        <h5 class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased text-center">
+         Master Mix
+        </h5>
+        <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+        La box de maitre. 
+        </p>
+      </div>
+      <div class="p-6 pt-0">
+        <button data-ripple-light="true" type="button" class="select-none rounded-lg bg-dark py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none text-white">
+          Commander
+        </button>
+        <div class="col position-relative ml-10">
+          <p class="absolute bottom-0 right-0  block font-sans text-xs font-light leading-relaxed text-inherit antialiased underline">
+              En savoir plus sur le produit. 
+          </p>
+      </div>
+    </div>
+      </div>
+
+      <div class="relative flex w-full sm:w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md scale-80">
+        <div class="relative mx-4 -mt-6 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
+          <img src="../../../assets/ressources/img/menu/amateur-mix.jpg" alt="menu_freshmix">
+        </div>
+        <div class="p-6">
+          <h5 class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased text-center">
+           Amateur Mix
+          </h5>
+          <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+          La box pour les amateurs. 
+          </p>
+        </div>
+        <div class="p-6 pt-0">
+          <button data-ripple-light="true" type="button" class="select-none rounded-lg bg-dark py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none text-white">
+            Commander
+          </button>
+          <div class="col position-relative ml-10">
+            <p class="absolute bottom-0 right-0  block font-sans text-xs font-light leading-relaxed text-inherit antialiased underline">
+                En savoir plus sur le produit. 
+            </p>
+        </div>
+      </div>
+        </div>
+      </div>
+      <div class="flex items-center justify-center sm:-mt-5 md:-mt-20 lg:-mt-40 xl:-mt-60 pb-40">
+        <button data-ripple-light="true" type="button" class="txtbutton select-none rounded-lg bg-white text-center align-middle font-sans text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold uppercase text-black shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none w-[112px] sm:w-[100px] md:w-[112px] lg:w-[125px] xl:w-[150px] h-[46px] sm:h-[40px] md:h-[46px] lg:h-[50px] xl:h-[60px] m-0">
+          <a routerLink="/menu">Voir plus</a>
+        </button>
+      </div>
+      </div>
+</div>

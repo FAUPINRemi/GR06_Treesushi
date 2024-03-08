@@ -1,5 +1,5 @@
-<nav class="bg-black bg-opacity-25  relative px-8 py-2 flex justify-between items-center ">
-    <a class="text-3xl  font-bold leading-none" href="index.html">
+<nav class="sticky top-0 bg-black bg-opacity-25  relative px-8 py-2 flex justify-between items-center ">
+    <a class="text-3xl  font-bold leading-none" routerLink="/">
         <img class="w-28" src="../../../assets/ressources/img/logov2_treesushi.png" alt="">
     </a>
     <div class="lg:hidden">
@@ -11,15 +11,10 @@
         </button>
     </div>
     <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-        <li><a class="text-base text-gray-300 hover:underline hover:text-white" href="#accueil">Information</a></li>
+        <li><a class="text-base text-gray-300 hover:underline hover:text-white" routerLink="/">Informations</a></li>
 
-        <li><a class="text-base text-gray-300 ml-24 hover:underline hover:text-white" href="#apropos">Menu</a></li>
+        <li><a class="text-base text-gray-300 ml-24 hover:underline hover:text-white" routerLink="/menu">Menu</a></li>
 
-        <li><a class="text-base text-gray-300 ml-24 hover:underline hover:text-white" href="#competences">A propos</a></li>
-
-
+        <li><a class="text-base text-gray-300 ml-24 hover:underline hover:text-white" routerLink="/a-propos">A propos</a></li>
     </ul>
-
-    
 </nav>
-

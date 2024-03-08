@@ -7,6 +7,7 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 import { AccueilComponent } from './pages/accueil/accueil.component';
 import { AproposComponent } from './pages/apropos/apropos.component';
 import { MenuComponent } from './pages/menu/menu.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { MenuComponent } from './pages/menu/menu.component';
     AccueilComponent,
     AproposComponent,
     MenuComponent,
+    FooterComponent,
  
   ],
   imports: [

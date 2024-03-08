@@ -47,4 +47,32 @@
 
 
 
+  *::-webkit-scrollbar {
+    height: 3px;
+    width: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color:transparent;
+  }
   
+  *::-webkit-scrollbar-track:hover {
+    background-color: transparent;
+  }
+  
+  *::-webkit-scrollbar-track:active {
+    background-color: transparent;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #E4A0C7;
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #E4A0C7;
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+    background-color: #E4A0C7;
+  }
