@@ -8,6 +8,8 @@ import { AccueilComponent } from './pages/accueil/accueil.component';
 import { AproposComponent } from './pages/apropos/apropos.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { MenuaespComponent } from './pages/menuaesp/menuaesp.component';
+import { ErrorPageComponent } from './pages/error-page/error-page.component';
 
 
 @NgModule({
@@ -18,6 +20,8 @@ import { FooterComponent } from './component/footer/footer.component';
     AproposComponent,
     MenuComponent,
     FooterComponent,
+    MenuaespComponent,
+    ErrorPageComponent,
  
   ],
   imports: [
