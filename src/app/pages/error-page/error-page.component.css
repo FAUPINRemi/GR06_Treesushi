@@ -1,0 +1,7 @@
+body {
+    background-image: url('../../../assets/ressources/img/sushi_noir_blanc.jpg');
+    background-repeat: no-repeat;
+    background-color: #ffff;
+    background-position: center; 
+    background-size: cover; 
+}
