@@ -17,6 +17,14 @@ if ($_SERVER["REQUEST_METHOD"] == "PUT") {
 
     $data = json_decode(file_get_contents("php://input"));
 
+    if (!empty($data->nom) && !empty($data->pieces) && !empty($data->prix) && !empty($data->img) && !empty($data->id)) { // Corrected here{
+        $menu->id = $data->id;
+        $menu->nom = $data->nom;
+        $menu->pieces = $data->pieces;
+        $menu->prix = $data->prix;
+        $menu->img = $data->img;
+    }
+
     $menu->id = isset($data->id) ? $data->id : null;
     $menu->nom = isset($data->nom) ? $data->nom : null;
     $menu->pieces = isset($data->pieces) ? $data->pieces : null; // Corrected here

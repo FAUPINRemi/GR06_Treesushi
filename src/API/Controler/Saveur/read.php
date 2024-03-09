@@ -18,6 +18,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $stmt = $saveur->read();
     $num = $stmt->rowCount();
 
+
+
     if ($num > 0) {
         $saveur_arr = [];
         $saveur_arr["Saveurs"] = [];
