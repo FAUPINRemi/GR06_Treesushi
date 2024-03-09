@@ -1,10 +1,10 @@
 <?php
 class Database
 {
-    private $serveur = "localhost";
-    private $utilisateur = "root";
-    private $mot_de_passe  = "";
-    private $base_de_donnees = "testapi3";
+    private $serveur = "https://databases.000webhost.com";
+    private $utilisateur = "id21969745_treesushiapi";
+    private $mot_de_passe  = "TreesushiAPI1234?";
+    private $base_de_donnees = "id21969745_testapi3";
     public $connexion;
 
 
