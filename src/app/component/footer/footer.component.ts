@@ -8,9 +8,10 @@ import { Router } from '@angular/router';
 })
 export class FooterComponent {
 
-  constructor(private router: Router) { }
+  constructor(public router: Router) { }
 
   isMenuPage(): boolean {
     return this.router.url === '/menu-choix';
+    
   }
 }

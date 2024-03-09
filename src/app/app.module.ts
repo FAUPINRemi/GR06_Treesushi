@@ -11,6 +11,8 @@ import { FooterComponent } from './component/footer/footer.component';
 import { MenuaespComponent } from './pages/menuaesp/menuaesp.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormconnexionComponent } from './pages/formconnexion/formconnexion.component';
+import { ForminscriptionComponent } from './pages/forminscription/forminscription.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FooterComponent,
     MenuaespComponent,
     ErrorPageComponent,
+    FormconnexionComponent,
+    ForminscriptionComponent,
  
   ],
   imports: [
