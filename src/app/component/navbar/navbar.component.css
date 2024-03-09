@@ -1,4 +1,21 @@
+*{
+
+
+}
+
 nav{
     z-index: 20;
   
 }
+
+
+ul li ul.dropdown{
+    position: absolute;
+    display: none;
+
+}
+
+ul li:hover ul.dropdown{
+    display: block;
+}
+
