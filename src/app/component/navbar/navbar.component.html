@@ -1,23 +1,22 @@
+
+<div *ngIf="!isMenuPage()">
 <nav class="sticky top-0 bg-black bg-opacity-25  relative px-8 py-2 flex justify-between items-center ">
     <a class="text-3xl  font-bold leading-none" routerLink="/">
         <img class="w-28" src="../../../assets/ressources/img/logov2_treesushi.png" alt="">
     </a>
     <div class="lg:hidden">
-        <button class="navbar-burger flex items-center text-blue-600 p-3">
+        <button class="navbar-burger flex items-center text-blue-600 p-3" (click)="toggleMenu()">
             <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <title></title>
                 <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
             </svg>
         </button>
     </div>
-    <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+    <ul class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6" [class.hidden]="!menuVisible">
         <li><a class="text-base text-gray-300 hover:underline hover:text-white " routerLink="/">Informations</a></li>
-
         <li><a class="text-base text-gray-300 ml-24 hover:underline hover:text-white" routerLink="/menu">Menu</a></li>
-
         <li><a class="text-base text-gray-300 ml-24 hover:underline hover:text-white" routerLink="/a-propos">A propos</a></li>
     </ul>
-
 
     <div class="hidden lg:inline-block lg:flex">
 
@@ -38,44 +37,38 @@
             </li>
         </ul>
     </div>
-
 </nav>
-
-<div class="navbar-menu relative z-50 hidden ">
+<div class="navbar-menu relative z-50" [class.hidden]="!menuVisible">
     <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-    <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+    <nav class="fixed top-0 left-0 right-0 bottom-0 flex flex-col py-6 px-6 bg-dark border-r overflow-y-auto w-full">
         <div class="flex items-center mb-8">
             <a class="mr-auto text-3xl font-bold leading-none" href="#">
-
                 <img class="w-16" src="img/9391703.png" alt="">
             </a>
-            <button class="navbar-close">
+            <button class="navbar-close" (click)="closeMenu()">
                 <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
         </div>
         <div>
-            <ul>
-                <li class="mb-1">
-                    <a class="block p-4 text-base text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#accueil">Inforamtion</a>
+            <ul class="flex justify-center ">
+                <li class="mr-4">
+                    <a (click)="closeMenu()" class="block p-4 text-base text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" routerLink="/">Informations</a>
                 </li>
-                <li class="mb-1">
-                    <a class="block p-4 text-base text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#apropos">Menu</a>
+                <li class="mr-4">
+                    <a (click)="closeMenu()" class="block p-4 text-base text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" routerLink="/menu">Menu</a>
                 </li>
-                <li class="mb-1">
-                    <a class="block p-4 text-base text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#competences">A propos</a>
+                <li class="mr-4">
+                    <a (click)="closeMenu()" class="block p-4 text-base text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" routerLink="/a-propos">A propos</a>
                 </li>
-
             </ul>
         </div>
         <div class="mt-auto">
-
             <p class="my-4 text-xs text-center text-gray-400">
                 
             </p>
         </div>
     </nav>
 </div>
-
-
+</div>

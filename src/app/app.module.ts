@@ -10,7 +10,7 @@ import { MenuComponent } from './pages/menu/menu.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { MenuaespComponent } from './pages/menuaesp/menuaesp.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,6 +27,7 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
   
 
 
