@@ -46,8 +46,11 @@ class Saveur
     {
         $sql = "UPDATE $this->table SET nom = :nom WHERE id = :id";
         $stmt = $this->connexion->prepare($sql);
-        $stmt->bindParam(':id', $this->id);
+
+
         $stmt->bindParam(':nom', $this->nom);
+        $stmt->bindParam(':id', $this->id);
+
         $stmt->execute();
         if ($stmt->execute()) {
             return true;

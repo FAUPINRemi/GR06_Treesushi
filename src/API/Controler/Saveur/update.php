@@ -13,15 +13,19 @@ if ($_SERVER["REQUEST_METHOD"] == "PUT") {
     $database = new Database();
     $connexion = $database->GetConnection();
 
-    $menu = new Saveur($connexion);
+    $saveur = new Saveur($connexion);
 
     $data = json_decode(file_get_contents("php://input"));
 
-    $menu->id = isset($data->id) ? $data->id : null;
-    $menu->nom = isset($data->nom) ? $data->nom : null;
-   
+    if (!empty($data->nom)) {
 
-    if ($menu->update()) {
+
+        $saveur->nom = $data->nom;
+        $saveur->id = $data->id;
+    }
+
+
+    if ($saveur->update()) {
         http_response_code(200);
         echo json_encode(["message" => "Saveurs mis à jour"]);
     } else {

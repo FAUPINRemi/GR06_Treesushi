@@ -27,13 +27,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($aliment->create()) {
         http_response_code(201);
-        echo json_encode(["message" => "Aliment créé"]);
+        echo json_encode(["message" => "Saveur créé"]);
     } else {
         http_response_code(503);
-        echo json_encode(["message" => "Impossible de créer l'aliment"]);
+        echo json_encode(["message" => "Impossible de créer la saveur"]);
     }
 } else {
     http_response_code(400);
     echo json_encode(["message" => "Méthode non autorisée"]);
 }
-?>

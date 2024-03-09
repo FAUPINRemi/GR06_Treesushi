@@ -13,22 +13,26 @@ if ($_SERVER["REQUEST_METHOD"] == "PUT") {
     $database = new Database();
     $connexion = $database->GetConnection();
 
-    $menu = new Aliment($connexion);
+    $saveur = new Aliment($connexion);
 
     $data = json_decode(file_get_contents("php://input"));
 
-    $menu->id = isset($data->id) ? $data->id : null;
-    $menu->nom = isset($data->nom) ? $data->nom : null;
-   
+    if (!empty($data->nom)) {
 
-    if ($menu->update()) {
+
+        $saveur->nom = $data->nom;
+        $saveur->id = $data->id;
+    }
+
+
+    if ($saveur->update()) {
         http_response_code(200);
-        echo json_encode(["message" => "Saveurs mis à jour"]);
+        echo json_encode(["message" => "Aliment mis à jour"]);
     } else {
         http_response_code(503);
-        echo json_encode(["message" => "Impossible de mettre à jour les saveurs"]);
+        echo json_encode(["message" => "Impossible de mettre à jour l'aliment"]);
     }
 } else {
     http_response_code(400);
-    echo json_encode(["message" => "Impossible de mettre à jour les saveurs. Les données sont incomplètes"]);
+    echo json_encode(["message" => "Impossible de mettre à jour les aliment. Les données sont incomplètes"]);
 }

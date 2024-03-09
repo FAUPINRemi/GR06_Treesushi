@@ -72,39 +72,67 @@ class Menu
      */
     public function read() // Méthode pour lire tous les menus
     {
-        $sql = "SELECT
-        menu.id,
-        menu.nom,
-        menu.prix,
-        menu.img,
-        menu.pieces,
-        aliment.nom as aliment_nom,
-        aliment.quantite as aliment_quantite, 
-        saveur.nom as saveur_nom,
-        saveur.quantite as saveur_quantite
-    FROM
-        menu
-    JOIN
-        contenir ON contenir.id_menu = menu.id
-    JOIN
-        aliment ON contenir.id_aliment = aliment.id
-    JOIN
-        commander ON commander.id_menu = menu.id
-    JOIN
-        saveur ON commander.id_saveur = saveur.id";
+        $sql = " 
+        SELECT 
+        menu.id, 
+        menu.nom, 
+        menu.prix, 
+        menu.img, 
+        menu.pieces, 
+        aliment.nom as aliment_nom, 
+        COUNT(contenir.id_aliment) as aliment_quantite, 
+        GROUP_CONCAT(DISTINCT saveur.nom) as saveur_nom, 
+        GROUP_CONCAT(DISTINCT saveur.quantite) as saveur_quantite 
+    FROM 
+        menu 
+    JOIN 
+        contenir ON contenir.id_menu = menu.id 
+    JOIN 
+        aliment ON contenir.id_aliment = aliment.id 
+    JOIN 
+        commander ON commander.id_menu = menu.id 
+    JOIN 
+        saveur ON commander.id_saveur = saveur.id 
+    GROUP BY 
+        menu.id, 
+        aliment.id,
+        saveur.id
+        
+        ";
 
         $stmt = $this->connexion->prepare($sql);
         $stmt->execute();
         return $stmt;
     }
 
-    public function readOne() // Méthode pour lire un menu
+    public function readOne()
     {
-        $sql = "SELECT * FROM $this->table WHERE id = :id";
+        $sql = "SELECT DISTINCT saveur.id, saveur.nom, saveur.quantite FROM menu, commander, saveur WHERE menu.id = commander.id_menu AND saveur.id = commander.id_saveur AND menu.id = :id;";
+        $sql2 = " SELECT DISTINCT aliment.id,aliment.nom,aliment.quantite FROM menu, aliment, contenir WHERE menu.id = contenir.id_menu AND aliment.id = contenir.id_aliment AND menu.id = :id;";
+        $sql3 = "SELECT DISTINCT menu.id, menu.nom, menu.prix, menu.img, menu.pieces FROM menu WHERE id = :id;";
+        /**
+         *  saveur
+         */
         $stmt = $this->connexion->prepare($sql);
         $stmt->bindParam(':id', $this->id);
         $stmt->execute();
-        return $stmt;
+
+        /**
+         * aliment
+         */
+
+        $stmt2 = $this->connexion->prepare($sql2);
+        $stmt2->bindParam(':id', $this->id);
+        $stmt2->execute();
+
+        /**
+         * menu
+         */
+        $stmt3 = $this->connexion->prepare($sql3);
+        $stmt3->bindParam(':id', $this->id);
+        $stmt3->execute();
+
+        return array($stmt, $stmt2, $stmt3);
     }
 
     public function readByNom() // Méthode pour lire un menu par son nom

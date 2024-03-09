@@ -22,24 +22,13 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $menu_arr = []; // Définir $menu_arr avant la condition
 
     if ($num > 0) {
-        $menu_arr["Menus"] = [];
+        $menu_arr = [];
 
         $menus = [];
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             extract($row);
 
-            $aliment = [
-                "id" => $id, // Ajouter l'ID de l'aliment
-                "nom" => $aliment_nom,
-                "quantité" => $aliment_quantite
-            ];
-            $saveur = [
-                "nom" => $saveur_nom,
-            ];
-
             if ($num > 0) {
-                $menu_arr["Menus"] = [];
-
                 $menus = [];
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     extract($row);
@@ -49,9 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                         "nom" => $aliment_nom,
                         "quantité" => $aliment_quantite
                     ];
-                    $saveur = [
-                        "nom" => $saveur_nom,
-                    ];
+                    $saveur = $saveur_nom;
 
                     if (!isset($menus[$id])) {
                         $menus[$id] = [
@@ -77,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                 }
 
                 foreach ($menus as $menu) {
-                    array_push($menu_arr["Menus"], $menu);
+                    array_push($menu_arr, $menu);
                 }
 
                 http_response_code(200);
