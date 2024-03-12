@@ -7,6 +7,7 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { MenuaespComponent } from './pages/menuaesp/menuaesp.component';
 import { FormconnexionComponent } from './pages/formconnexion/formconnexion.component';
 import { ForminscriptionComponent } from './pages/forminscription/forminscription.component';
+import { AdminaddComponent } from './pages/adminadd/adminadd.component';
 const routes: Routes = [
   { path: '', redirectTo: 'accueil', pathMatch: 'full' },
   { path: 'accueil', component: AccueilComponent },
@@ -15,8 +16,11 @@ const routes: Routes = [
   { path: 'menu-choix', component: MenuaespComponent },
   { path: 'connexion', component: FormconnexionComponent },
   { path: 'inscription', component: ForminscriptionComponent },
+  { path: 'adminadd', component: AdminaddComponent },
   { path: '404', component: ErrorPageComponent },
-  { path: '**', redirectTo: '404' }
+  { path: '**', redirectTo: '404' },
+  
+
 ];
 
 @NgModule({
