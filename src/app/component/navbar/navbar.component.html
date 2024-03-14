@@ -1,7 +1,7 @@
 
 <div *ngIf="!isMenuPage()">
-<nav class="sticky top-0 bg-black bg-opacity-25  relative px-8 py-2 flex justify-between items-center ">
-    <a class="text-3xl  font-bold leading-none" routerLink="/">
+    <nav class="sticky top-0 bg-black bg-opacity-25  relative px-8 py-2 flex justify-between items-center text-white">
+        <a class="text-3xl  font-bold leading-none" routerLink="/">
         <img class="w-28" src="../../../assets/ressources/img/logov2_treesushi.png" alt="">
     </a>
     <div class="lg:hidden">
@@ -12,10 +12,10 @@
             </svg>
         </button>
     </div>
-    <ul class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6" [class.hidden]="!menuVisible">
-        <li><a class="text-base text-gray-300 hover:underline hover:text-white " routerLink="/">Informations</a></li>
-        <li><a class="text-base text-gray-300 ml-24 hover:underline hover:text-white" routerLink="/menu">Menu</a></li>
-        <li><a class="text-base text-gray-300 ml-24 hover:underline hover:text-white" routerLink="/a-propos">A propos</a></li>
+    <ul class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6 text-white" [class.hidden]="!menuVisible">
+        <li><a class="text-base hover:underline" routerLink="/">Informations</a></li>
+        <li><a class="text-base ml-24 hover:underline" routerLink="/menu">Menu</a></li>
+        <li><a class="text-base ml-24 hover:underline" routerLink="/a-propos">A propos</a></li>
     </ul>
 
     <div class="hidden lg:inline-block lg:flex">
