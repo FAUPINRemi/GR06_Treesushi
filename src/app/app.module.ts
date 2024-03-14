@@ -19,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AdminaddComponent } from './pages/adminadd/adminadd.component';
 import { DetailboxComponent } from './pages/detailbox/detailbox.component';
 import { CommandmenuComponent } from './pages/commandmenu/commandmenu.component';
+<<<<<<< HEAD
 
 @NgModule({
   declarations: [
@@ -33,22 +34,27 @@ import { CommandmenuComponent } from './pages/commandmenu/commandmenu.component'
     FormconnexionComponent,
     ForminscriptionComponent,
     TraitementInscriptionComponent,
+=======
     AdminaddComponent,
     DetailboxComponent,
     CommandmenuComponent
    
-
+>>>>>>> 4cf9175c047bdbcb712787a9dd3840279902e57a
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule,
+<<<<<<< HEAD
+    FormsModule, // N'oubliez pas d'ajouter FormsModule ici
+=======
     HttpClientModule,
     HttpClientJsonpModule,
     ReactiveFormsModule,
     FormsModule
 
+
+>>>>>>> 4cf9175c047bdbcb712787a9dd3840279902e57a
   ],
   providers: [],
   bootstrap: [AppComponent]
