@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'; // Importez FormsModule
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormconnexionComponent } from './pages/formconnexion/formconnexion.component';
 import { ForminscriptionComponent } from './pages/forminscription/forminscription.component';
+import { TraitementInscriptionComponent } from './pages/traitement-inscription/traitement-inscription.component';
 
 @NgModule({
   declarations: [
@@ -26,15 +28,13 @@ import { ForminscriptionComponent } from './pages/forminscription/forminscriptio
     ErrorPageComponent,
     FormconnexionComponent,
     ForminscriptionComponent,
- 
+    TraitementInscriptionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-  
-
-
+    FormsModule, // N'oubliez pas d'ajouter FormsModule ici
   ],
   providers: [],
   bootstrap: [AppComponent]

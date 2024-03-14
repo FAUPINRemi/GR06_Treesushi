@@ -1,59 +1,57 @@
 <div class="formulairecss">
-<div class="form-container">
-	<p class="title">Inscription</p>
-	<form class="form" action="traitement_inscription.php" method="post">
-		<div class="input-group w-full">
-			<label for="civilité">Civilité</label>
-			<input type="text" name="civilité" id="formulaire" placeholder="">
-		</div>
+    <div class="form-container">
+        <p class="title">Inscription</p>
+        <form class="form" #inscriptionForm="ngForm" (ngSubmit)="inscription(inscriptionForm)">
+            <div class="input-group w-full">
+                <label for="civilité">Civilité</label>
+                <input type="text" name="civilité" id="civilité" placeholder="" ngModel>
+            </div>
 
-		<div class="input-group_id w-full">
-			<div class="half-width">
-				<label for="prénom">Prénom :</label>
-				<input type="text" name="prénom" id="formulaire_id" class="identifiant" placeholder="">
-			</div>
+            <div class="input-group_id w-full">
+                <div class="half-width">
+                    <label for="prénom">Prénom :</label>
+                    <input type="text" name="prénom" id="prénom" class="identifiant" placeholder="" ngModel>
+                </div>
 
-			<div class="half-width w-full"> 
-				<label for="nom">Nom :</label>
-				<input type="text" name="nom" id="formulaire_id" class="identifiant" placeholder="">
-			</div>
-		</div>
+                <div class="half-width w-full">
+                    <label for="nom">Nom :</label>
+                    <input type="text" name="nom" id="nom" class="identifiant" placeholder="" ngModel>
+                </div>
+            </div>
 
-		<div class="input-group w-full">
-			<label for="adresse">Adresse :</label>
-			<input type="text" name="adresse" id="formulaire" placeholder="">
-		</div>
-		
-		<div class="input-group w-full">
-			<label for="ville">Ville :</label>
-			<input type="text" name="ville" id="formulaire" placeholder="">
-		</div>
+            <div class="input-group w-full">
+                <label for="adresse">Adresse :</label>
+                <input type="text" name="adresse" id="adresse" placeholder="" ngModel>
+            </div>
 
-		<div class="input-group w-full">
-			<label for="code_postal">Code postal :</label>
-			<input type="text" name="code_postal" id="formulaire" placeholder="">
-		</div>
+            <div class="input-group w-full">
+                <label for="ville">Ville :</label>
+                <input type="text" name="ville" id="ville" placeholder="" ngModel>
+            </div>
 
-		<div class="input-group w-full">
-			<label for="télephone">Téléphone :</label>
-			<input type="text" name="téléphone" id="formulaire" placeholder="">
-		</div>
-		
-		<div class="input-group w-full">
-			<label for="email">Email :</label>
-			<input type="text" name="email" id="formulaire" placeholder="">
-		</div>
+            <div class="input-group w-full">
+                <label for="code_postal">Code postal :</label>
+                <input type="text" name="code_postal" id="code_postal" placeholder="" ngModel>
+            </div>
 
-		<div class="input-group_password w-full">
-			<label for="password">Mot de passe :</label>
-			<div class="placement_oeil center_input">
-				<input type="password" name="password" id="password" placeholder="" >
-				<img src="../../../assets/ressources/icon/oeil.png" alt="oeil" id="oeil" (click)="changer()" />
-			</div>
-		</div>
-		<button class="sign"><a routerLink="/">Inscription</a></button>
-	</form>
-	
-	
-</div>    
+            <div class="input-group w-full">
+                <label for="téléphone">Téléphone :</label>
+                <input type="text" name="téléphone" id="téléphone" placeholder="" ngModel>
+            </div>
+
+            <div class="input-group w-full">
+                <label for="email">Email :</label>
+                <input type="text" name="email" id="email" placeholder="" ngModel>
+            </div>
+
+            <div class="input-group_password w-full">
+                <label for="password">Mot de passe :</label>
+                <div class="placement_oeil center_input">
+                    <input type="password" name="password" id="password" placeholder="">
+                    <img src="../../../assets/ressources/icon/oeil.png" alt="oeil" id="oeil" (click)="changer()" />
+                </div>
+            </div>
+            <button type="submit" class="sign">Inscription</button>
+        </form>
+    </div>
 </div>
