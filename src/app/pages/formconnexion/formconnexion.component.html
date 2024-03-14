@@ -3,19 +3,19 @@
 
 <div class="form-container">
 	<p class="title">Connexion</p>
-	<form class="form" action="login.php" method="post">
+	<form class="form" #connexionForm="ngForm" (ngSubmit)="connexion(connexionForm.value)">
 		<div class="input-group">
 			<label for="email">Email</label>
-			<input type="text" name="email" id="formulaire" placeholder="">
+			<input type="text" name="email" id="formulaire" placeholder="" ngModel>
 		</div>
 		<div class="input-group">
 			<label for="password">Mot de passe</label>
-			<input type="password" name="password" id="formulaire" placeholder="">
+			<input type="password" name="password" id="formulaire" placeholder="" ngModel>
 			<div class="forgot">
 				<a rel="noopener noreferrer" href="#">Mot de passe oublié ?</a>
 			</div>
 		</div>
-		<input type="submit" class="sign" name="valider" value="valider" > 
+		<button type="submit" class="sign">Valider</button>
 	</form>
 	<div class="social-message">
 		<div class="line"></div>
