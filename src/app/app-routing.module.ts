@@ -11,6 +11,7 @@ import { TraitementInscriptionComponent } from './pages/traitement-inscription/t
 import { AdminaddComponent } from './pages/adminadd/adminadd.component';
 import { DetailboxComponent } from './pages/detailbox/detailbox.component';
 import { CommandmenuComponent } from './pages/commandmenu/commandmenu.component';
+import { TraitementcommandeComponent } from './pages/traitementcommande/traitementcommande.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'accueil', pathMatch: 'full' },
@@ -20,11 +21,12 @@ const routes: Routes = [
   { path: 'menu-choix', component: MenuaespComponent },
   { path: 'connexion', component: FormconnexionComponent },
   { path: 'inscription', component: ForminscriptionComponent },
-  { path: 'traitementinscription', component: TraitementInscriptionComponent},
+  { path: 'recapinscription', component: TraitementInscriptionComponent},
   { path: 'adminadd', component: AdminaddComponent },
   { path: '404', component: ErrorPageComponent },
   { path: 'detailbox', component: DetailboxComponent },
   { path: 'commandmenu', component: CommandmenuComponent },
+  { path: 'recapcommande', component: TraitementcommandeComponent},
   { path: '**', redirectTo: '404' },
 ];
 

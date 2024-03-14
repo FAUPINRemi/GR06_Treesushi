@@ -28,7 +28,7 @@ export class ForminscriptionComponent {
         console.log('Données stockées avec succès dans le localStorage');
 
       
-        this.router.navigate(['/traitementinscription']);
+        this.router.navigate(['/recapinscription']);
       } else {
         console.log('Veuillez remplir tous les champs du formulaire');
       }

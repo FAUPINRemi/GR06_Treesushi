@@ -1,0 +1,12 @@
+<!-- traitementcommande.component.html -->
+<div>
+<h1>Votre commande :</h1>
+
+<ul>
+  <li *ngFor="let item of cart">
+    Produit : {{ item.nom }} | Quantité : {{ item.quantity }} | Prix  : {{ item.totalPrice }} €
+  </li>
+</ul>
+
+ <p id="prix">Prix total de la commande : {{ getTotalPrice() }} €</p>
+</div>
