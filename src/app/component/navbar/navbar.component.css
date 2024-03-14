@@ -1,11 +1,8 @@
-*{
 
-
-}
 
 nav{
     z-index: 20;
-  
+  position: sticky;
 }
 
 
@@ -18,4 +15,5 @@ ul li ul.dropdown{
 ul li:hover ul.dropdown{
     display: block;
 }
+
 

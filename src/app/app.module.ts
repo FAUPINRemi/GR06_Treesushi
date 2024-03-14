@@ -18,9 +18,10 @@ import { FormsModule } from '@angular/forms';
 import { AdminaddComponent } from './pages/adminadd/adminadd.component';
 import { DetailboxComponent } from './pages/detailbox/detailbox.component';
 import { CommandmenuComponent } from './pages/commandmenu/commandmenu.component';
+
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent, 
     NavbarComponent,
     AccueilComponent,
     AproposComponent,
@@ -32,7 +33,7 @@ import { CommandmenuComponent } from './pages/commandmenu/commandmenu.component'
     ForminscriptionComponent,
     AdminaddComponent,
     DetailboxComponent,
-    CommandmenuComponent,
+    CommandmenuComponent
    
   ],
   imports: [
