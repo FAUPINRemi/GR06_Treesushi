@@ -12,7 +12,8 @@ import { AdminaddComponent } from './pages/adminadd/adminadd.component';
 import { DetailboxComponent } from './pages/detailbox/detailbox.component';
 import { CommandmenuComponent } from './pages/commandmenu/commandmenu.component';
 import { TraitementcommandeComponent } from './pages/traitementcommande/traitementcommande.component';
-
+import { ProfilComponent } from './pages/profil/profil.component';
+import { TraitementProfilComponent } from './pages/traitement-profil/traitement-profil.component'; 
 const routes: Routes = [
   { path: '', redirectTo: 'accueil', pathMatch: 'full' },
   { path: 'accueil', component: AccueilComponent },
@@ -27,7 +28,10 @@ const routes: Routes = [
   { path: 'detailbox', component: DetailboxComponent },
   { path: 'commandmenu', component: CommandmenuComponent },
   { path: 'recapcommande', component: TraitementcommandeComponent},
+  {path: 'profil', component: ProfilComponent},
+  {path : 'traitement-profil', component: TraitementProfilComponent},
   { path: '**', redirectTo: '404' },
+
 ];
 
 @NgModule({

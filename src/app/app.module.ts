@@ -20,6 +20,8 @@ import { AdminaddComponent } from './pages/adminadd/adminadd.component';
 import { DetailboxComponent } from './pages/detailbox/detailbox.component';
 import { CommandmenuComponent } from './pages/commandmenu/commandmenu.component';
 import { TraitementcommandeComponent } from './pages/traitementcommande/traitementcommande.component';
+import { ProfilComponent } from './pages/profil/profil.component';
+import { TraitementProfilComponent } from './pages/traitement-profil/traitement-profil.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { TraitementcommandeComponent } from './pages/traitementcommande/traiteme
     AdminaddComponent,
     DetailboxComponent,
     CommandmenuComponent,
-    TraitementcommandeComponent
+    TraitementcommandeComponent,
+    ProfilComponent,
+    TraitementProfilComponent
      ],
   imports: [
     BrowserModule,
