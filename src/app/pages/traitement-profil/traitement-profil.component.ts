@@ -27,7 +27,7 @@ export class TraitementProfilComponent {
         console.log('Données stockées avec succès dans le localStorage');
 
       
-        this.router.navigate(['/accueil']);
+        this.router.navigate(['/profil-message']);
       } else {
         console.log('Veuillez remplir tous les champs du formulaire');
       }
