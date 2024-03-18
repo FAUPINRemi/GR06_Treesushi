@@ -1,12 +1,30 @@
-<!-- traitementcommande.component.html -->
-<div>
-<h1>Votre commande :</h1>
+<div class="flex items-start m-4">
+  <div class="flex flex-col mt-4">
+    <img class="w-full sm:w-[247px] h-auto static max-w-full z-10" src="../../../assets/ressources/img/commande/sushicolored1.png" alt="sushi1">
+    <img class="w-full sm:w-[247px] h-auto static max-w-full z-10" src="../../../assets/ressources/img/commande/sushicolored2.webp" alt="sushi2">
+    <img class="w-full sm:w-[247px] h-auto static max-w-full z-10" src="../../../assets/ressources/img/commande/sushicolored3.webp" alt="sushi3">
+  </div>
 
-<ul>
-  <li *ngFor="let item of cart">
-    Produit : {{ item.nom }} | Quantité : {{ item.quantity }} | Prix  : {{ item.totalPrice }} €
-  </li>
-</ul>
+  <div class="w-full sm:mx-auto ">
+    <div class="containercommande">
+      <h1 class="titrecontainercommande">Votre commande</h1>
+      <div class="contenucommande">
+        <ul>
+          <li *ngFor="let item of cart" class="flex items-center justify-center text-center m-4">
+            <p class="txtcommande ">Produit : {{ item.nom }} | Quantité : {{ item.quantity }} | Prix  :  {{ item.totalPrice | number:'1.2-2'}} € </p> 
+          </ul>
+        <p id="prix" class="endcontainercommande">Total de la commande :{{ getTotalPrice() }} €</p>
+        <a routerLink="/"><button class="buttonvalid w-full  rounded mt-2 sm:mt-0" >CONFIRMER LA COMMANDE</button></a>
+        <button class="buttonvabandon w-full rounded mt-2 sm:mt-0 sm:mr-2" (click)="confirmAbandon()">ABANDONNER LA COMMANDE</button>
+      </div>
+    </div>
+  </div>
 
- <p id="prix">Prix total de la commande : {{ getTotalPrice() }} €</p>
+  <div class="flex items-start m-4">
+    <div class="flex flex-col mt-4 ml-auto">
+      <img class="w-full sm:w-[247px] h-auto static max-w-full z-10" src="../../../assets/ressources/img/commande/sushicolored1.png" alt="sushi1">
+      <img class="w-full sm:w-[247px] h-auto static max-w-full z-10" src="../../../assets/ressources/img/commande/sushicolored2.webp" alt="sushi2">
+      <img class="w-full sm:w-[247px] h-auto static max-w-full z-10" src="../../../assets/ressources/img/commande/sushicolored3.webp" alt="sushi3">
+    </div>
+  </div>
 </div>

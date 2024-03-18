@@ -23,9 +23,12 @@
         
 
         
-        <img class=" cursor-pointer w-6" src="../../../assets/ressources/icon/icons8-shopping-cart-96.png" alt="">
+        <img class=" cursor-pointer w-6" src="../../../assets/ressources/icon/icons8-shopping-cart-96.png" alt="panier">
+        <span class="text-white">{{ cartService.getCount() }}</span> 
+
+    
         <ul>
-            <li><img class=" cursor-pointer ml-10 w-6" src="../../../assets/ressources/icon/icons8-user-96.png" alt="">
+            <li><img class=" cursor-pointer ml-10 w-6" src="../../../assets/ressources/icon/icons8-user-96.png" alt="account">
                 <ul class="dropdown  w-36 absolute top-10 right-1">
                     <li id="black" class="cursor-default bg-black bg-opacity-25 text-white py-2 text-center my-1 hover:bg-gray-200 opacity-0">Voir commande</li>
                     <li class="bg-black bg-opacity-25 text-white py-2 text-center my-1 hover:bg-gray-200"><a  routerLink="">Voir commande</a></li>

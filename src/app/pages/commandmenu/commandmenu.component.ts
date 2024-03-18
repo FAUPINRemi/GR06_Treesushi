@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../../data.service'; 
+import { CartserviceService } from '../../cartservice.service'; 
 
 @Component({
   selector: 'app-commandmenu',
@@ -10,13 +11,14 @@ export class CommandmenuComponent {
   data: any;
   cart: any[] = []; 
 
-  constructor(private dataService: DataService) { 
+  constructor(private dataService: DataService, private cartService: CartserviceService) { 
     this.dataService.getData().subscribe(data => {
       this.data = data;
     });
   }
 
   addToCart(item: any) {
+    this.cartService.incrementCount(); 
     const totalItems = this.cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
     if (totalItems < 10) {
         const foundItem = this.cart.find((cartItem: any) => cartItem.nom === item.nom);
@@ -31,13 +33,17 @@ export class CommandmenuComponent {
     }
   }
 
+
+
   removeFromCart(item: any) {
+    this.cartService.decrementCount();
     const foundItem = this.cart.find(cartItem => cartItem.nom === item.nom);
     if (foundItem && foundItem.quantity > 1) {
       foundItem.quantity -= 1;
       foundItem.totalPrice = foundItem.quantity * foundItem.prix;
     } else {
       this.cart = this.cart.filter(cartItem => cartItem.nom !== item.nom);
+      
     }
   }
 
@@ -63,4 +69,6 @@ export class CommandmenuComponent {
     
     window.location.href = '/recapcommande';
   }
+
+  
 }

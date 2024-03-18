@@ -1,6 +1,6 @@
-// traitementcommande.component.ts
-
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../data.service'; 
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-traitementcommande',
@@ -11,16 +11,30 @@ export class TraitementcommandeComponent implements OnInit {
   
   cart: any[] = []; 
 
-  constructor() { }
-
   ngOnInit(): void {
     const cartData = localStorage.getItem('cart');
+    console.log(cartData); 
     if (cartData) {
       this.cart = JSON.parse(cartData);
     }
+    console.log(this.cart); 
   }
+  data: any;
 
   getTotalPrice(): number {
     return this.cart.reduce((total, item) => total + item.totalPrice, 0);
   }
+
+  constructor(private dataService: DataService, private router: Router) {
+    this.dataService.getData().subscribe(data => {
+      this.data = data;
+    });
+  }
+  confirmAbandon(): void {
+    const userConfirmed = confirm('Êtes-vous sûr de vouloir abandonner ?');
+    if (userConfirmed) {
+      this.router.navigate(['/']); 
+    }
+  }
+
 }

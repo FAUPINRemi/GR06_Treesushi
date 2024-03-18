@@ -15,11 +15,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormconnexionComponent } from './pages/formconnexion/formconnexion.component';
 import { ForminscriptionComponent } from './pages/forminscription/forminscription.component';
 import { TraitementInscriptionComponent } from './pages/traitement-inscription/traitement-inscription.component';
+import { TraitementcommandeComponent } from './pages/traitementcommande/traitementcommande.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AdminaddComponent } from './pages/adminadd/adminadd.component';
 import { DetailboxComponent } from './pages/detailbox/detailbox.component';
 import { CommandmenuComponent } from './pages/commandmenu/commandmenu.component';
-<<<<<<< HEAD
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -34,27 +35,23 @@ import { CommandmenuComponent } from './pages/commandmenu/commandmenu.component'
     FormconnexionComponent,
     ForminscriptionComponent,
     TraitementInscriptionComponent,
-=======
     AdminaddComponent,
     DetailboxComponent,
-    CommandmenuComponent
+    CommandmenuComponent,
+    TraitementcommandeComponent,
    
->>>>>>> 4cf9175c047bdbcb712787a9dd3840279902e57a
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-<<<<<<< HEAD
-    FormsModule, // N'oubliez pas d'ajouter FormsModule ici
-=======
+    FormsModule, 
     HttpClientModule,
     HttpClientJsonpModule,
     ReactiveFormsModule,
-    FormsModule
-
-
->>>>>>> 4cf9175c047bdbcb712787a9dd3840279902e57a
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
