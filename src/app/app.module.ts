@@ -13,6 +13,7 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormconnexionComponent } from './pages/formconnexion/formconnexion.component';
 import { ForminscriptionComponent } from './pages/forminscription/forminscription.component';
+import { OnemenuComponent } from './pages/onemenu/onemenu.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ForminscriptionComponent } from './pages/forminscription/forminscriptio
     ErrorPageComponent,
     FormconnexionComponent,
     ForminscriptionComponent,
+    OnemenuComponent,
  
   ],
   imports: [
