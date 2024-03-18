@@ -11,7 +11,13 @@ export class CartserviceService {
 
 
   incrementCount() {
-    this.count++;
+    if (this.count < 10) { 
+      this.count++;
+    }
+  
+  }
+deleteCount() {
+    this.count = 0;
   }
 
   decrementCount() {
