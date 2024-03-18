@@ -20,7 +20,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AdminaddComponent } from './pages/adminadd/adminadd.component';
 import { DetailboxComponent } from './pages/detailbox/detailbox.component';
 import { CommandmenuComponent } from './pages/commandmenu/commandmenu.component';
+import { ProfilComponent } from './pages/profil/profil.component';
+import { TraitementProfilComponent } from './pages/traitement-profil/traitement-profil.component';
 import { CommonModule } from '@angular/common';
+import { ProfilTraitementComponent } from './pages/profil-traitement/profil-traitement.component';
 
 @NgModule({
   declarations: [
@@ -39,9 +42,10 @@ import { CommonModule } from '@angular/common';
     DetailboxComponent,
     CommandmenuComponent,
     TraitementcommandeComponent,
-   
-
-  ],
+    ProfilComponent,
+    TraitementProfilComponent,
+    ProfilTraitementComponent
+     ],
   imports: [
     BrowserModule,
     AppRoutingModule,
