@@ -22,9 +22,7 @@ class Menu
         $this->connexion = $connexion;
     }
 
-    /**
-     * Méthode serveur:POST
-     */
+    
 
     public function create($data)
     {
@@ -40,10 +38,10 @@ class Menu
         $stmt_menu->execute();
 
 
-        // Récupération de l'ID du menu inséré
+        
         $menu_id = $this->connexion->lastInsertId();
 
-        // Insérer les aliments spécifiés
+      
         foreach ($data['aliments'] as $alimentId) {
             $sql_insert_aliment = "INSERT INTO contenir (id_aliment, id_menu) VALUES (:id_aliment, :id_menu)";
             $stmt_insert_aliment = $this->connexion->prepare($sql_insert_aliment);
@@ -62,15 +60,13 @@ class Menu
 
 
 
-        return true; // Succès
+        return true; 
 
     }
 
 
-    /**
-     * Méthode serveur:GET
-     */
-    public function read() // Méthode pour lire tous les menus
+   
+    public function read() 
     {
         $sql = " 
         SELECT 
@@ -110,24 +106,18 @@ class Menu
         $sql = "SELECT DISTINCT saveur.id, saveur.nom, saveur.quantite FROM menu, commander, saveur WHERE menu.id = commander.id_menu AND saveur.id = commander.id_saveur AND menu.id = :id;";
         $sql2 = " SELECT DISTINCT aliment.id,aliment.nom,aliment.quantite FROM menu, aliment, contenir WHERE menu.id = contenir.id_menu AND aliment.id = contenir.id_aliment AND menu.id = :id;";
         $sql3 = "SELECT DISTINCT menu.id, menu.nom, menu.prix, menu.img, menu.pieces FROM menu WHERE id = :id;";
-        /**
-         *  saveur
-         */
+       
         $stmt = $this->connexion->prepare($sql);
         $stmt->bindParam(':id', $this->id);
         $stmt->execute();
 
-        /**
-         * aliment
-         */
+     
 
         $stmt2 = $this->connexion->prepare($sql2);
         $stmt2->bindParam(':id', $this->id);
         $stmt2->execute();
 
-        /**
-         * menu
-         */
+      
         $stmt3 = $this->connexion->prepare($sql3);
         $stmt3->bindParam(':id', $this->id);
         $stmt3->execute();
@@ -135,7 +125,7 @@ class Menu
         return array($stmt, $stmt2, $stmt3);
     }
 
-    public function readByNom() // Méthode pour lire un menu par son nom
+    public function readByNom() 
     {
         $sql = "SELECT * FROM $this->table WHERE nom = :nom";
         $stmt = $this->connexion->prepare($sql);
@@ -145,9 +135,7 @@ class Menu
     }
 
 
-    /**
-     * Méthode serveur:PUT
-     */
+   
     public function update()
     {
         $sql = "UPDATE $this->table SET nom = :nom, pieces = :pieces, prix = :prix, img = :img WHERE id = :id";
@@ -164,29 +152,28 @@ class Menu
             return false;
         }
     }
-    public function delete() // Méthode pour supprimer un menu
+    public function delete() 
     {
-        $menu_id = $this->id; // Utilisez l'ID du menu défini dans la requête DELETE
+        $menu_id = $this->id; 
 
-        // Supprimer les aliments associés au menu
+  
         $sql_delete_aliment = "DELETE FROM contenir WHERE id_menu = :id_menu";
         $stmt_delete_aliment = $this->connexion->prepare($sql_delete_aliment);
         $stmt_delete_aliment->bindParam(':id_menu', $menu_id);
         $stmt_delete_aliment->execute();
 
-        // Supprimer les saveurs associées au menu
         $sql_delete_saveur = "DELETE FROM commander WHERE id_menu = :id_menu";
         $stmt_delete_saveur = $this->connexion->prepare($sql_delete_saveur);
         $stmt_delete_saveur->bindParam(':id_menu', $menu_id);
         $stmt_delete_saveur->execute();
 
-        // Supprimer le menu
+       
         $sql = "DELETE FROM $this->table WHERE id = :id";
         $stmt_menu = $this->connexion->prepare($sql);
         $stmt_menu->bindParam(':id', $menu_id);
         $stmt_menu->execute();
 
-        // Vérifiez si le menu a été supprimé
+      
         if ($stmt_menu->rowCount() > 0) {
             return true;
         } else {
