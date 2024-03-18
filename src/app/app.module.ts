@@ -15,13 +15,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormconnexionComponent } from './pages/formconnexion/formconnexion.component';
 import { ForminscriptionComponent } from './pages/forminscription/forminscription.component';
 import { TraitementInscriptionComponent } from './pages/traitement-inscription/traitement-inscription.component';
+import { TraitementcommandeComponent } from './pages/traitementcommande/traitementcommande.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AdminaddComponent } from './pages/adminadd/adminadd.component';
 import { DetailboxComponent } from './pages/detailbox/detailbox.component';
 import { CommandmenuComponent } from './pages/commandmenu/commandmenu.component';
-import { TraitementcommandeComponent } from './pages/traitementcommande/traitementcommande.component';
 import { ProfilComponent } from './pages/profil/profil.component';
 import { TraitementProfilComponent } from './pages/traitement-profil/traitement-profil.component';
+import { CommonModule } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +38,6 @@ import { TraitementProfilComponent } from './pages/traitement-profil/traitement-
     FormconnexionComponent,
     ForminscriptionComponent,
     TraitementInscriptionComponent,
-
     AdminaddComponent,
     DetailboxComponent,
     CommandmenuComponent,
@@ -48,12 +49,12 @@ import { TraitementProfilComponent } from './pages/traitement-profil/traitement-
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule, // N'oubliez pas d'ajouter FormsModule ici
-
+    FormsModule, 
     HttpClientModule,
     HttpClientJsonpModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

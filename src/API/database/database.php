@@ -2,12 +2,11 @@
 class Database
 {
 
-
-
     private $serveur = "localhost";
     private $utilisateur = "id21969745_treesushiapi";
     private $mot_de_passe  = "TreesushiAPI1234?";
     private $base_de_donnees = "id21969745_testapi3";
+
     public $connexion;
 
 
