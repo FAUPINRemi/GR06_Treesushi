@@ -16,11 +16,15 @@ import { FormconnexionComponent } from './pages/formconnexion/formconnexion.comp
 import { ForminscriptionComponent } from './pages/forminscription/forminscription.component';
 import { OnemenuComponent } from './pages/onemenu/onemenu.component';
 import { TraitementInscriptionComponent } from './pages/traitement-inscription/traitement-inscription.component';
+import { TraitementcommandeComponent } from './pages/traitementcommande/traitementcommande.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AdminaddComponent } from './pages/adminadd/adminadd.component';
 import { DetailboxComponent } from './pages/detailbox/detailbox.component';
 import { CommandmenuComponent } from './pages/commandmenu/commandmenu.component';
-import { TraitementcommandeComponent } from './pages/traitementcommande/traitementcommande.component';
+import { ProfilComponent } from './pages/profil/profil.component';
+import { TraitementProfilComponent } from './pages/traitement-profil/traitement-profil.component';
+import { CommonModule } from '@angular/common';
+import { ProfilTraitementComponent } from './pages/profil-traitement/profil-traitement.component';
 
 
 @NgModule({
@@ -40,19 +44,22 @@ import { TraitementcommandeComponent } from './pages/traitementcommande/traiteme
     AdminaddComponent,
     DetailboxComponent,
     CommandmenuComponent,
-    TraitementcommandeComponent
+    TraitementcommandeComponent,
+    ProfilComponent,
+    TraitementProfilComponent,
+    ProfilTraitementComponent
      ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule, // N'oubliez pas d'ajouter FormsModule ici
-
+    FormsModule, 
     HttpClientModule,
     HttpClientJsonpModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

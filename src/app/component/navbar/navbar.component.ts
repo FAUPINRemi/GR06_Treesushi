@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { CartserviceService } from '../../cartservice.service'; 
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 export class NavbarComponent {
   menuVisible = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public cartService: CartserviceService) { } // Déclarez cartService comme une variable publique
 
   toggleMenu() {
     this.menuVisible = !this.menuVisible;
@@ -22,4 +23,5 @@ export class NavbarComponent {
   isMenuPage(): boolean {
     return this.router.url === '/menu-choix';
   }
+  
 }
