@@ -1,5 +1,10 @@
-# SAE 401 GR06 Treesushi : Gestion des commandes d'un restaurant de sushi.
-## Membres du projet : FAUPIN Rémi, MAREGA Erwan, MERLETTI Sacha, SANGARE Darryl
+# SAE 401 GR06 Treesushi : <br> Gestion des commandes d'un restaurant de sushi.
+
+### Membres du projet : FAUPIN Rémi, MAREGA Erwan, MERLETTI Sacha, SANGARE Darryl
+
+### Date de lancement : 13/02/2024 
+### Date de fin :
+
 
 ## Table of Contents
 
