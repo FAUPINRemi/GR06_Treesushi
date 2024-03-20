@@ -7,6 +7,7 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { MenuaespComponent } from './pages/menuaesp/menuaesp.component';
 import { FormconnexionComponent } from './pages/formconnexion/formconnexion.component';
 import { ForminscriptionComponent } from './pages/forminscription/forminscription.component';
+import { OnemenuComponent } from './pages/onemenu/onemenu.component';
 import { TraitementInscriptionComponent } from './pages/traitement-inscription/traitement-inscription.component';
 import { AdminaddComponent } from './pages/adminadd/adminadd.component';
 import { DetailboxComponent } from './pages/detailbox/detailbox.component';
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'recapinscription', component: TraitementInscriptionComponent},
   { path: 'adminadd', component: AdminaddComponent },
   { path: '404', component: ErrorPageComponent },
+  { path: 'onemenu', component: OnemenuComponent },
   { path: 'detailbox', component: DetailboxComponent },
   { path: 'commandmenu', component: CommandmenuComponent },
   { path: 'recapcommande', component: TraitementcommandeComponent},

@@ -14,6 +14,7 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormconnexionComponent } from './pages/formconnexion/formconnexion.component';
 import { ForminscriptionComponent } from './pages/forminscription/forminscription.component';
+import { OnemenuComponent } from './pages/onemenu/onemenu.component';
 import { TraitementInscriptionComponent } from './pages/traitement-inscription/traitement-inscription.component';
 import { TraitementcommandeComponent } from './pages/traitementcommande/traitementcommande.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -25,6 +26,7 @@ import { TraitementProfilComponent } from './pages/traitement-profil/traitement-
 import { CommonModule } from '@angular/common';
 import { ProfilTraitementComponent } from './pages/profil-traitement/profil-traitement.component';
 import { VoirCommandeComponent } from './pages/voir-commande/voir-commande.component';
+
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { VoirCommandeComponent } from './pages/voir-commande/voir-commande.compo
     ErrorPageComponent,
     FormconnexionComponent,
     ForminscriptionComponent,
+    OnemenuComponent,
     TraitementInscriptionComponent,
     AdminaddComponent,
     DetailboxComponent,
@@ -48,6 +51,7 @@ import { VoirCommandeComponent } from './pages/voir-commande/voir-commande.compo
     ProfilTraitementComponent,
     VoirCommandeComponent
      ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
