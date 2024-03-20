@@ -15,6 +15,8 @@ import { TraitementcommandeComponent } from './pages/traitementcommande/traiteme
 import { ProfilComponent } from './pages/profil/profil.component';
 import { TraitementProfilComponent } from './pages/traitement-profil/traitement-profil.component'; 
 import { ProfilTraitementComponent } from './pages/profil-traitement/profil-traitement.component';
+import { VoirCommandeComponent } from './pages/voir-commande/voir-commande.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'accueil', pathMatch: 'full' },
@@ -33,6 +35,7 @@ const routes: Routes = [
   {path: 'profil', component: ProfilComponent},
   {path : 'traitement-profil', component: TraitementProfilComponent},
   {path : 'profil-message', component: ProfilTraitementComponent},
+  {path : 'voir_commande', component: VoirCommandeComponent },
   { path: '**', redirectTo: '404' },
 
 ];

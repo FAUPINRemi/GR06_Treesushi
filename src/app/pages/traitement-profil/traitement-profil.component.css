@@ -15,7 +15,7 @@
   font-size: 1.5rem;
   line-height: 15px;
   font-weight: 700;
-  color: rgba(156, 163, 175, 1);
+  color: #000;
 }
 
 .form {
@@ -32,7 +32,7 @@
   outline: 0;
   background-color: #fff;
   padding: 0.75rem 1rem;
-  color: rgba(156, 163, 175, 1);
+  color: #000;
 }
 
 
@@ -52,7 +52,7 @@
 
 .input-group label {
   display: block;
-  color: rgba(156, 163, 175, 1);
+  color: #000;
   margin-bottom: 4px;
 }
 
@@ -63,7 +63,7 @@
   outline: 0;
   background-color: #fff;
   padding: 0.75rem 1rem;
-  color: rgba(243, 244, 246, 1);
+  color: #000;
 }
 
 .input-group input:focus {
@@ -101,7 +101,7 @@
 
 .input-group_id label {
   display: block;
-  color: rgba(156, 163, 175, 1);
+  color: #000 ;
   margin-bottom: 4px;
 }
 
