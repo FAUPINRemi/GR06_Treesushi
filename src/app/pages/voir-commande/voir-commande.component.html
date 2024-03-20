@@ -1,9 +1,36 @@
-<div class="form-container">
-    <p class="title">Ma commande : </p>
-</div>
-<div class="information">
-    <p>Commande: {{ civilite }}</p>
-</div>
-    <div class="modif">
-        <button class="text_modif" routerLink="/menu">MODIFIER MA COMMANDE</button>
+<div class="flex items-start m-4">
+    <div class="flex flex-col mt-4">
+        <!-- Vous pouvez supprimer ces images si vous ne les utilisez pas -->
+        <img class="w-full sm:w-[247px] h-auto static max-w-full z-10" src="../../../assets/ressources/img/commande/sushicolored1.png" alt="sushi1">
+        <img class="w-full sm:w-[247px] h-auto static max-w-full z-10" src="../../../assets/ressources/img/commande/sushicolored2.webp" alt="sushi2">
+        <img class="w-full sm:w-[247px] h-auto static max-w-full z-10" src="../../../assets/ressources/img/commande/sushicolored3.webp" alt="sushi3">
     </div>
+  
+    <div class="w-full sm:mx-auto ">
+        <div class="form-container">
+            <p class="title">Ma commande : </p>
+        
+            <div class="information">
+                <ul>
+                    <li *ngFor="let item of cart">
+                        <img class="w-full sm:w-[247px] h-auto static max-w-full z-10" src="{{ item.img }}" alt="{{ item.nom }}">
+                        <p>{{ item.nom }} - {{ item.quantity }} - {{ item.totalPrice | number:'1.2-2' }} €</p>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="modif">
+                <button class="text_modif" routerLink="/menu">MODIFIER MA COMMANDE</button>
+            </div> 
+        </div>
+    </div>
+  
+    <div class="flex items-start m-4">
+      <div class="flex flex-col mt-4 ml-auto">
+        <!-- Vous pouvez supprimer ces images si vous ne les utilisez pas -->
+        <img class="w-full sm:w-[247px] h-auto static max-w-full z-10" src="../../../assets/ressources/img/commande/sushicolored1.png" alt="sushi1">
+        <img class="w-full sm:w-[247px] h-auto static max-w-full z-10" src="../../../assets/ressources/img/commande/sushicolored2.webp" alt="sushi2">
+        <img class="w-full sm:w-[247px] h-auto static max-w-full z-10" src="../../../assets/ressources/img/commande/sushicolored3.webp" alt="sushi3">
+      </div>
+    </div>
+</div>

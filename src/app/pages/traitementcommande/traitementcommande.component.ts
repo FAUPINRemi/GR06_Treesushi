@@ -19,7 +19,6 @@ export class TraitementcommandeComponent implements OnInit {
     }
     console.log(this.cart); 
   }
-  data: any;
 
   getTotalPrice(): number {
     return this.cart.reduce((total, item) => total + item.totalPrice, 0);
@@ -27,9 +26,11 @@ export class TraitementcommandeComponent implements OnInit {
 
   constructor(private dataService: DataService, private router: Router) {
     this.dataService.getData().subscribe(data => {
-      this.data = data;
+      // Not sure if you need this part
+      // this.data = data;
     });
   }
+
   confirmAbandon(): void {
     const userConfirmed = confirm('Êtes-vous sûr de vouloir abandonner ?');
     if (userConfirmed) {
