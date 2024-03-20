@@ -53,6 +53,7 @@ export class CommandmenuComponent {
 
   clearCart() {
     this.cart = []; 
+    this.cartService.deleteCount();
   }
 
   getQuantity(aliment: any) {
