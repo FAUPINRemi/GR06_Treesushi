@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; // Importez FormsModule
+import { FormsModule } from '@angular/forms'; 
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,7 +27,6 @@ import { CommonModule } from '@angular/common';
 import { ProfilTraitementComponent } from './pages/profil-traitement/profil-traitement.component';
 import { VoirCommandeComponent } from './pages/voir-commande/voir-commande.component';
 
-
 @NgModule({
   declarations: [
     AppComponent, 
@@ -50,17 +49,17 @@ import { VoirCommandeComponent } from './pages/voir-commande/voir-commande.compo
     TraitementProfilComponent,
     ProfilTraitementComponent,
     VoirCommandeComponent
-     ],
+  ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule, 
+    FormsModule,
     HttpClientModule,
     HttpClientJsonpModule,
     ReactiveFormsModule,
-    FormsModule,
+    FormsModule, 
     CommonModule
   ],
   providers: [],
