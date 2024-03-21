@@ -25,6 +25,7 @@ import { ProfilComponent } from './pages/profil/profil.component';
 import { TraitementProfilComponent } from './pages/traitement-profil/traitement-profil.component';
 import { CommonModule } from '@angular/common';
 import { ProfilTraitementComponent } from './pages/profil-traitement/profil-traitement.component';
+import { VoirCommandeComponent } from './pages/voir-commande/voir-commande.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { ProfilTraitementComponent } from './pages/profil-traitement/profil-trai
     TraitementcommandeComponent,
     ProfilComponent,
     TraitementProfilComponent,
-    ProfilTraitementComponent
+    ProfilTraitementComponent,
+    VoirCommandeComponent
      ],
 
   imports: [

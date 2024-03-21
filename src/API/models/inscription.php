@@ -21,7 +21,9 @@ class Inscription{
    }
 
 
- 
+   /**
+    * Méthode serveur:POST
+    */
     public function create(){
          $sql = "INSERT INTO $this->table (civilite, prenom, nom, adresse, ville, code_postal, telephone, email, password) VALUES (:civilite, :prenom, :nom, :adresse, :ville, :code_postal, :telephone, :email, :password)";
          $stmt = $this->connexion->prepare($sql);
@@ -37,7 +39,9 @@ class Inscription{
          $stmt->execute();
     }
 
-   
+    /**
+     * Méthode serveur:GET
+     */
     public function read(){
         $sql = "SELECT * FROM $this->table";
         $stmt = $this->connexion->prepare($sql);
@@ -53,7 +57,9 @@ class Inscription{
         return $stmt;
     }
 
-    
+    /**
+     * Méthode serveur:PUT
+     */
    public function update(){
          $sql = "UPDATE $this->table SET civilite = :civilite, prenom = :prenom, nom = :nom, adresse = :adresse, ville = :ville, code_postal = :code_postal, telephone = :telephone, email = :email, password = :password WHERE id = :id";
          $stmt = $this->connexion->prepare($sql);
@@ -71,7 +77,9 @@ class Inscription{
     
    }
 
-   
+   /**
+    * Méthode serveur:DELETE
+    */
     public function delete(){
           $sql = "DELETE FROM $this->table WHERE id = :id";
           $stmt = $this->connexion->prepare($sql);

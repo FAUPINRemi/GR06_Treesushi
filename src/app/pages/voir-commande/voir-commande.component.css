@@ -1,0 +1,52 @@
+.form-container {
+      
+    background-color: #0A1327;
+    padding: 2rem;
+    color: rgba(243, 244, 246, 1);
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 100px;   
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 15px;
+    font-weight: 700;
+}
+
+.information{
+    width: 25%;   
+    background-color: #0A1327;
+    padding: 2rem;
+    color: rgba(243, 244, 246, 1);
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 100px;   
+}
+
+
+.modif{
+    width: 20%;   
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 2rem;
+    color: rgba(243, 244, 246, 1);
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 130px; 
+   
+}
+
+.text_modif{
+ 
+    font-size: 1rem;
+    line-height: 15px;
+    font-weight: 700;
+    color: #0A1327;
+}
+
+
+

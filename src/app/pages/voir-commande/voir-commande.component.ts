@@ -3,11 +3,11 @@ import { DataService } from '../../data.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-traitementcommande',
-  templateUrl: './traitementcommande.component.html',
-  styleUrls: ['./traitementcommande.component.css']
+  selector: 'app-voir-commande',
+  templateUrl: './voir-commande.component.html',
+  styleUrls: ['./voir-commande.component.css'] // Notez que c'est styleUrls au lieu de styleUrl
 })
-export class TraitementcommandeComponent implements OnInit {
+export class VoirCommandeComponent implements OnInit {
   
   cart: any[] = []; 
 
@@ -30,12 +30,4 @@ export class TraitementcommandeComponent implements OnInit {
       // this.data = data;
     });
   }
-
-  confirmAbandon(): void {
-    const userConfirmed = confirm('Êtes-vous sûr de vouloir abandonner ?');
-    if (userConfirmed) {
-      this.router.navigate(['/']); 
-    }
-  }
-
 }
