@@ -1,30 +1,34 @@
-# GR06Treesushi
+# SAE 401 GR06 Treesushi : <br> Gestion des commandes d'un restaurant de sushi.
+
+### Membres du projet : FAUPIN Rémi, MAREGA Erwan, MERLETTI Sacha, SANGARE Darryl
+
+### Nom du Groupe : Treesushi
+### Date de lancement : 13/02/2024 
+### Date de fin :
 
 
-#Site Web de restauration de suhi dans le cadre d'un projet étudiant.
+## Table des matières
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
+- [Livrable L401_1 : Dossier d'analyse ](#Livrable1)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-## Development server
+## <a name="Livrable1"></a> Livrable L401_1 : Dossier d'analyse 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Usage 
 
-## Build
+Instructions for how to use your project.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## License
 
-## Running end-to-end tests
+Information about the license.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Contact
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Your contact information.
