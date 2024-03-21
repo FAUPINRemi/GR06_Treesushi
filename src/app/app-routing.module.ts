@@ -31,6 +31,7 @@ const routes: Routes = [
   { path: 'adminadd', component: AdminaddComponent },
   { path: '404', component: ErrorPageComponent },
   { path: 'onemenu', component: OnemenuComponent },
+  { path: 'onemenu/:id', component: OnemenuComponent },
   { path: 'detailbox', component: DetailboxComponent },
   { path: 'commandmenu', component: CommandmenuComponent },
   { path: 'recapcommande', component: TraitementcommandeComponent},

@@ -7,7 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./onemenu.component.css']
 })
 export class OnemenuComponent  {
-  id: any;
+
+
+
+
+
 }
   
 
