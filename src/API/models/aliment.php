@@ -14,8 +14,10 @@ class Aliment
         $this->connexion = $connexion;
     }
 
-    
-    public function create()  
+    /**
+     * Méthode serveur:POST
+     */
+    public function create()  // Méthode pour ajouter un aliment
     {
         $sql = "INSERT INTO $this->table (nom) VALUES (:nom)";
         $stmt = $this->connexion->prepare($sql);
@@ -27,8 +29,10 @@ class Aliment
         }
     }
 
- 
-    public function read() 
+    /**
+     * Méthode serveur:GET
+     */
+    public function read() // Méthode pour lire tous les aliments
     {
         $sql = "SELECT * FROM $this->table";
         $stmt = $this->connexion->prepare($sql);
@@ -36,7 +40,7 @@ class Aliment
         return $stmt;
     }
 
-    public function readOne() 
+    public function readOne() // Méthode pour lire un aliment
     {
         $sql = "SELECT * FROM $this->table WHERE id = :id";
         $stmt = $this->connexion->prepare($sql);
@@ -45,7 +49,7 @@ class Aliment
         return $stmt;
     }
 
-    public function readByNom() 
+    public function readByNom() // Méthode pour lire un aliment par son nom
     {
         $sql = "SELECT * FROM $this->table WHERE nom = :nom";
         $stmt = $this->connexion->prepare($sql);
@@ -54,8 +58,10 @@ class Aliment
         return $stmt;
     }
 
-    
-    public function update() 
+    /**
+     * Méthode serveur:PUT
+     */
+    public function update() // Méthode pour modifier un aliment
     {
         $sql = "UPDATE $this->table SET nom = :nom WHERE id = :id";
         $stmt = $this->connexion->prepare($sql);
@@ -69,8 +75,10 @@ class Aliment
         }
     }
 
-   
-    public function delete() 
+    /**
+     * Méthode serveur:DELETE
+     */
+    public function delete() // Méthode pour supprimer un aliment
     {
         $sql = "DELETE FROM $this->table WHERE id = :id";
         $stmt = $this->connexion->prepare($sql);
