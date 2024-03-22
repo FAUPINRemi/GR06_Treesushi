@@ -241,7 +241,7 @@ CREATE TABLE IF NOT EXISTS `menu` (
   `nom` varchar(50) NOT NULL,
   `pieces` int NOT NULL,
   `prix` decimal(15,3) NOT NULL,
-  `img` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `img` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
