@@ -1,0 +1,78 @@
+
+@font-face {
+    font-family: 'Gilmer';
+    src: url('./assets/ressources/font/Gilmer-Heavy.woff2') format('woff2'),
+        url('./assets/ressources/font/Gilmer-Heavy.woff') format('woff'),
+        url('./assets/ressources/font/Gilmer-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Arial';
+    src: url('./assets/ressources/font/ArialMT.woff2') format('woff2'),
+        url('./assets/ressources/font/ArialMT.woff') format('woff'),
+        url('./assets/ressources/font/ArialMT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Arial_Narrow';
+    src: url('./assets/ressources/font/ArialNarrow-Italic.woff2') format('woff2'),
+        url('./assets/ressources/font/ArialNarrow-Italic.woff') format('woff'),
+        url('./assets/ressources/font/ArialNarrow-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'GenEi';
+    src: url('./assets/ressources/font/GenEiLateMinP_v2.woff2') format('woff2'),
+        url('./assets/ressources/font/GenEiLateMinP_v2.woff') format('woff'),
+        url('./assets/ressources/font/GenEiLateMinP_v2.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@import '~aos/dist/aos.css';
+  
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+
+
+  *::-webkit-scrollbar {
+    height: 3px;
+    width: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color:transparent;
+  }
+  
+  *::-webkit-scrollbar-track:hover {
+    background-color: transparent;
+  }
+  
+  *::-webkit-scrollbar-track:active {
+    background-color: transparent;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #E4A0C7;
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #E4A0C7;
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+    background-color: #E4A0C7;
+  }
