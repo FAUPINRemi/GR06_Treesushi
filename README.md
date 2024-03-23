@@ -4,7 +4,7 @@
 
 ### Nom du Groupe : Treesushi
 ### Date de lancement : 13/02/2024 
-### Date de fin :
+### Date de fin : 23/03/2024
 
 
 erwan redige pour fe
@@ -91,7 +91,7 @@ Vous pouvez acceder au Trello en cliquant
 ## <a name="4"></a> 4) Analyse des besoins de l'application : <br> Diagramme de 'Use Case'
 
 <p align="center">
-  <img src="img/usecase.png" alt="Diagramme UseCase">
+   ![Diagramme Use Case](imgreadme/img/usecase.png)
 </p>
 
 ## <a name="5"></a> 5) Diagramme d'activité 
