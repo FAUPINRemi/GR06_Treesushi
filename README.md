@@ -6,6 +6,12 @@
 ### Date de lancement : 13/02/2024 
 ### Date de fin : 23/03/2024
 
+<br>
+
+### Note Erwan 
+Suite à un incident sur GitHub, une personne s'est connectée à son compte à partir de mon ordinateur. Après m'être déconnecté de son compte, chaque fois que je réalise des commits sur notre projet, ceux-ci sont attribués au nom de cette personne, bien que son compte ne soit plus actif sur mon ordinateur. Il est important de souligner que les commits en question sont bien les miens. Merci pour votre compréhension à cette situation.
+Cordialement,
+Erwan Marega
 
 erwan redige pour fe
 
@@ -120,8 +126,7 @@ Vous pouvez acceder au Trello en cliquant
  ![Maquette](imgreadme/Remi_Erwan_Sacha_Darryl_GR06_maquette-14.png)
 
 
-
-## License
+e
 
 Information about the license.
 
