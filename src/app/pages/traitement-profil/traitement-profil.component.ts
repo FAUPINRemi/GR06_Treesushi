@@ -48,5 +48,11 @@ export class TraitementProfilComponent {
         eyeIcon.src = "../../../assets/ressources/icon/oeil_ouvert noir.png";
     }
   }
-}
+  confirmAbandon(): void {
+    const userConfirmed = confirm('Êtes-vous sûr de vouloir abandonner ?');
+    if (userConfirmed) {
+      this.router.navigate(['/']); 
+    }
+  }
 
+}

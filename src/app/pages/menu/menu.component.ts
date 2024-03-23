@@ -18,5 +18,5 @@ export class MenuComponent {
   getQuantity(aliment: any) {
     return aliment['quantité'];
   }
-} 
 
+}
