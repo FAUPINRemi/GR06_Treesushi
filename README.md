@@ -126,10 +126,5 @@ Vous pouvez acceder au Trello en cliquant
  ![Maquette](imgreadme/Remi_Erwan_Sacha_Darryl_GR06_maquette-14.png)
 
 
-e
 
-Information about the license.
 
-## Contact
-
-Your contact information.
