@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./voir-commande.component.css'] 
 })
 export class VoirCommandeComponent implements OnInit {
-  
+
   cart: any[] = []; 
 
   ngOnInit(): void {
@@ -26,7 +26,13 @@ export class VoirCommandeComponent implements OnInit {
 
   constructor(private dataService: DataService, private router: Router) {
     this.dataService.getData().subscribe(data => {
-      
+
     });
+  }
+  confirmAbandon(): void {
+    const userConfirmed = confirm('Êtes-vous sûr de vouloir abandonner ?');
+    if (userConfirmed) {
+      this.router.navigate(['/']); 
+    }
   }
 }

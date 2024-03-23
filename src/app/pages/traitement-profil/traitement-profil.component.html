@@ -1,6 +1,7 @@
-<div class="formulairecss">
+<div class="w-full sm:mx-auto  " style="width: 40%; border-radius: 0px 30px 0px 0px; margin-bottom: 100px;">
     <div class="form-container">
-        <p class="title">Inscription</p>
+        <p class="title">Compte</p>
+    </div>
         <form class="form" #ModifForm="ngForm" (ngSubmit)="modification(ModifForm)">
             <div class="input-group w-full">
                 <label for="civilité">Civilité</label>
@@ -10,13 +11,13 @@
                 </select>
             </div>
 
-            <div class="input-group_id w-full">
+            <div class="input-group_id w-full sm:w-1/2">
                 <div class="half-width">
                     <label for="prénom">Prénom :</label>
                     <input type="text" name="prénom" id="prénom" class="identifiant" placeholder="" ngModel>
                 </div>
 
-                <div class="half-width w-full">
+                <div class="half-width sm:w-1/2 ">
                     <label for="nom">Nom :</label>
                     <input type="text" name="nom" id="nom" class="identifiant" placeholder="" ngModel>
                 </div>
@@ -54,8 +55,9 @@
                     <img src="../../../assets/ressources/icon/oeil_fermé noir.png" alt="oeil" id="oeil" (click)="changer()" />
                 </div>
             </div> 
-            <button type="submit" class="sign">Valider les informations</button>
+           
         </form>
-    </div>
-</div>
 
+     <a routerLink="/menu"><button class="buttonvalid w-full  rounded mt-2 sm:mt-0" >VALIDER</button></a>
+            <button class="buttonvabandon w-full rounded mt-2 sm:mt-0 sm:mr-2" (click)="confirmAbandon()">ABANDONNER</button>
+</div>

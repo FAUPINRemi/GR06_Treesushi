@@ -47,6 +47,6 @@ readSaveur(id: any){
       },
     };
 
-    return this.http.delete('http://localhost/htdocs/SAE401/GR06_Treesushi/src/API/Controler/Menu/delete.php', options);
+    return this.http.delete('http://localhost/GR06_Treesushi/src/API/Controler/Menu/delete.php', options);
   }
 }
