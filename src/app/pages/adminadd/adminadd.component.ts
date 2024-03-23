@@ -9,8 +9,46 @@ import { DataService } from '../../data.service';
 })
 export class AdminaddComponent implements OnInit {
   menuForm: FormGroup = new FormGroup({});
-  aliments = ['Aliment 1', 'Aliment 2', 'Aliment 3'];
-  saveurs = ['Saveur 1', 'Saveur 2', 'Saveur 3'];
+  aliments = [
+              { id: 1, nom: 'California Saumon Avocat' },
+              { id: 2, nom: 'Sushi Saumon' },
+              { id: 3, nom: 'Spring Avocat Cheese' },
+              {id:4, nom: 'California pacific'},
+              {id:5, nom:'Edamame/Salade de chou'},
+              {id:6, nom:'Maki Salmon Roll'},
+              {id:7, nom:'Spring Saumon Avocat'},
+              {id:8, nom:'Maki Cheese Avocat'},
+              {id:9, nom:'California Thon Cuit Avocat'},
+              {id:10, nom:'Sushi Thon'},
+              {id:11, nom:'California Thon Avocat'},
+              {id:12, nom:'Sando Chicken Katsu'},
+              {id:13, nom:'Sando Salmon Aburi'},
+              {id:14, nom:'Maki Salmon'},
+              {id:15, nom:'California Crevette'},
+              {id:16, nom:'California Chicken Katsu'},
+              {id:18, nom:'Spring tataki Saumon'},
+              {id:19, nom:'Signature Dragon Roll'},
+              {id:20, nom:'California French Touch'},
+              {id:21, nom:'California French salmon'},
+              {id:22, nom:'California Yellowtail Ponzu'},
+              {id:23, nom:"Signature Rock'n Roll"},
+              {id:24, nom:"Sushi Salmon"},
+              {id:24, nom:"Sushi Saumon Tsukudani"},
+
+              
+
+            ];
+  saveurs = [
+    { id: 1, nom: 'Saumon' },
+    { id: 2, nom: 'Avocat' },
+    { id: 3, nom: 'cheese' },
+    {id:4, nom: 'coriandre'},
+    {id:5, nom:'thon'},
+    {id:6, nom:'viande'},
+    {id:7, nom:'crevette'},
+    {id:8, nom:'spicy'},
+    {id:9, nom:'seriole lalandi'}
+];
 
   constructor(private fb: FormBuilder, private dataService: DataService) { }
 
@@ -40,21 +78,25 @@ export class AdminaddComponent implements OnInit {
   }
   submit() {
     const selectedAlimentIds = this.menuForm.value.aliments
-      .map((v: boolean, i: number) => v ? this.aliments[i] : null)
-      .filter((v: any) => v !== null);
+      .map((v: boolean, i: number) => v ? this.aliments[i].id : null)
+      .filter((v: any) => v !== null)
+      
   
     const selectedSaveurIds = this.menuForm.value.saveurs
-      .map((v: boolean, i: number) => v ? this.saveurs[i] : null)
-      .filter((v: any) => v !== null);
+      .map((v: boolean, i: number) => v ? this.saveurs[i].id : null)
+      .filter((v: any) => v !== null)
+      
   
     const data = {
       nom: this.menuForm.value.nom,
       img: this.menuForm.value.img,
-      pieces: this.menuForm.value.pieces,
-      prix: this.menuForm.value.prix,
+      pieces: Number(this.menuForm.value.pieces),
+      prix: Number(this.menuForm.value.prix),
       aliments: selectedAlimentIds,
       saveurs: selectedSaveurIds
     };
+
+    console.log(data)
   
     this.dataService.createMenu(data).subscribe(
       res => {

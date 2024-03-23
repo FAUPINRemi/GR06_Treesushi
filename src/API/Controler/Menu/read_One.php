@@ -10,26 +10,23 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 require_once "../../database/database.php";
 require_once "../../models/menu.php";
 
-// Créer une nouvelle instance de la base de données
+
 $database = new Database();
 $connexion = $database->GetConnection();
 
-// Créer une nouvelle instance de Menu
+
 $menu = new Menu($connexion);
 
-// Définir l'ID du menu à lire
 if (isset($_GET['id'])) {
     $menu->id = $_GET['id'];
 } else {
     die(json_encode(['message' => 'No ID provided']));
 }
 
-// Lire le menu
+
 $stmt = $menu->readOne();
 
-/**
- *  saveur part
- */
+
 $saveur = [];
 $saveur_tab = [];
 while ($row = $stmt[0]->fetch(PDO::FETCH_ASSOC)) {
@@ -39,9 +36,7 @@ while ($row = $stmt[0]->fetch(PDO::FETCH_ASSOC)) {
     array_push($saveur_tab, $saveur);
 }
 
-/**
- * aliment part
- */
+
 $aliment = [];
 $aliment_tab = [];
 while ($row = $stmt[1]->fetch(PDO::FETCH_ASSOC)) {
@@ -51,9 +46,7 @@ while ($row = $stmt[1]->fetch(PDO::FETCH_ASSOC)) {
     array_push($aliment_tab, $aliment);
 }
 
-/**
- * menu part
- */
+
 $menu = [];
 while ($row = $stmt[2]->fetch(PDO::FETCH_ASSOC)) {
     foreach ($row as $key => $value) {

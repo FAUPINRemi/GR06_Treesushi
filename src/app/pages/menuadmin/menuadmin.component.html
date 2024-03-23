@@ -27,14 +27,33 @@
           >
             <a routerLink="/menu-choix">Commander</a>
           </button>
+          <button
+            type="button"
+            class="select-none rounded-lg bg-red-500 py-3 px-6 text-center text-xs font-bold uppercase text-white shadow-md hover:shadow-lg focus:opacity-85 active:opacity-85 disabled:opacity-50"
+            (click)="deleteMenu(item.id)"
+          >
+            Supprimer
+          </button>
           <div class="relative ml-10">
             <br />
           </div>
-         
-            <a [routerLink]="['/onemenu', item.id]" class="">En savoir plus sur le produit.</a>
-          
+          <p class="text-xs font-light underline">
+            En savoir plus sur le produit.
+          </p>
         </div>
       </div>
     </div>
+
+    <a routerLink="/adminadd">
+      <div
+        class="card relative h-48 flex w-full sm:w-80 flex-col rounded-xl text-gray-700 shadow-md transform scale-80 items-center justify-center text-5xl"
+      >
+        <span>+</span>
+        <span
+          class="titrecardmenu mb-2 text-xl font-semibold tracking-normal text-blue-gray-900 text-center"
+          >Ajouter un menu</span
+        >
+      </div>
+    </a>
   </div>
 </div>
