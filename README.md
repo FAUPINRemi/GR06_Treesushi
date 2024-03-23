@@ -9,11 +9,11 @@
 <br>
 
 ### Note Erwan 
-Suite à un incident sur GitHub, une personne s'est connectée à son compte à partir de mon ordinateur. Après m'être déconnecté de son compte, chaque fois que je réalise des commits sur notre projet, ceux-ci sont attribués au nom de cette personne, bien que son compte ne soit plus actif sur mon ordinateur. Il est important de souligner que les commits en question sont bien les miens. Merci pour votre compréhension à cette situation.
+Suite à un incident sur GitHub, une personne s'est connectée à son compte à partir de mon ordinateur. Après m'être déconnecté de son compte, chaque fois que j'ai réalisé des commits sur notre projet, ceux-ci sont attribués au nom de cette personne, bien que son compte ne soit plus actif sur mon ordinateur. Il est important de souligner que les commits en question sont bien les miens. Merci pour votre compréhension à cette situation.
 Cordialement,
 Erwan Marega
 
-erwan redige pour fe
+
 
 ## Table des matières
 
