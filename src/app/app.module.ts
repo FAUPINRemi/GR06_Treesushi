@@ -26,6 +26,7 @@ import { TraitementProfilComponent } from './pages/traitement-profil/traitement-
 import { CommonModule } from '@angular/common';
 import { ProfilTraitementComponent } from './pages/profil-traitement/profil-traitement.component';
 import { VoirCommandeComponent } from './pages/voir-commande/voir-commande.component';
+import { MenuadminComponent } from './pages/menuadmin/menuadmin.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { VoirCommandeComponent } from './pages/voir-commande/voir-commande.compo
     ProfilComponent,
     TraitementProfilComponent,
     ProfilTraitementComponent,
-    VoirCommandeComponent
+    VoirCommandeComponent,
+    MenuadminComponent
   ],
 
   imports: [

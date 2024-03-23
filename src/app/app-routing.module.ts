@@ -17,6 +17,7 @@ import { ProfilComponent } from './pages/profil/profil.component';
 import { TraitementProfilComponent } from './pages/traitement-profil/traitement-profil.component'; 
 import { ProfilTraitementComponent } from './pages/profil-traitement/profil-traitement.component';
 import { VoirCommandeComponent } from './pages/voir-commande/voir-commande.component';
+import { MenuadminComponent } from './pages/menuadmin/menuadmin.component';
 
 
 const routes: Routes = [
@@ -39,6 +40,7 @@ const routes: Routes = [
   {path : 'traitement-profil', component: TraitementProfilComponent},
   {path : 'profil-message', component: ProfilTraitementComponent},
   {path : 'voir_commande', component: VoirCommandeComponent },
+{ path : 'menuadmin', component: MenuadminComponent},
   { path: '**', redirectTo: '404' },
 
 ];
