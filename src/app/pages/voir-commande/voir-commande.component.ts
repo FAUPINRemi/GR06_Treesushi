@@ -29,4 +29,10 @@ export class VoirCommandeComponent implements OnInit {
       
     });
   }
+  confirmAbandon(): void {
+    const userConfirmed = confirm('Êtes-vous sûr de vouloir abandonner ?');
+    if (userConfirmed) {
+      this.router.navigate(['/']); 
+    }
+  }
 }
