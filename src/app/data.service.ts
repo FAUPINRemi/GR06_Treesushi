@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders,  } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -28,5 +29,20 @@ export class DataService {
 
     return this.http.post('http://localhost/htdocs/SAE401/GR06_Treesushi/src/API/Controler/Menu/create.php', data, { headers });
   }
+
+  deleteMenu(id: number): Observable<any> {
+    const options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      }),
+      body: {
+        id: id
+      },
+    };
+  
+    return this.http.delete('http://localhost/htdocs/SAE401/GR06_Treesushi/src/API/Controler/Menu/delete.php', options);
+  }
+
 }
+
 
