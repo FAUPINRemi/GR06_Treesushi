@@ -28,6 +28,7 @@ import { ProfilTraitementComponent } from './pages/profil-traitement/profil-trai
 import { VoirCommandeComponent } from './pages/voir-commande/voir-commande.component';
 import { MenuadminComponent } from './pages/menuadmin/menuadmin.component';
 
+
 @NgModule({
   declarations: [
     AppComponent, 
@@ -50,7 +51,8 @@ import { MenuadminComponent } from './pages/menuadmin/menuadmin.component';
     TraitementProfilComponent,
     ProfilTraitementComponent,
     VoirCommandeComponent,
-    MenuadminComponent
+    MenuadminComponent,
+   
   ],
 
   imports: [

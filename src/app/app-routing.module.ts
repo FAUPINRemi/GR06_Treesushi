@@ -43,6 +43,7 @@ const routes: Routes = [
   {path : 'voir_commande', component: VoirCommandeComponent },
   { path : 'menuadmin', component: MenuadminComponent},
   
+  
 
   { path: '**', redirectTo: '404' },
 
