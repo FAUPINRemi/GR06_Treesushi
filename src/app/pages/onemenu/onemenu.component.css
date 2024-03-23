@@ -1,3 +1,25 @@
-#block{
+.container{
     background-color: #0A1327;
+    color: #ffffff;
 }
+
+.compo{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.containermenu{
+    background-color: #FFFFFF;
+}
+
+.titrecardmenu {
+    color: #0b2568;
+  }
+
+  .text_menu_container {
+    font-family: "GenEi", sans-serif;
+  }
+  
+  p {
+    font-family: "Arial", sans-serif;
+  }

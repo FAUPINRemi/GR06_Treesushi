@@ -14,8 +14,14 @@ export class DataService {
 
   
   getOneData(id: any){
-    return this.http.get(`https://treesushi-api.000webhostapp.com/API/Controler/Menu/read_One.php${id}`)
+    return this.http.get(`http://localhost/GR06_Treesushi/src/API/Controler/Menu/read_One.php?id=${id}`)
   }
+  readAliment(id: any){
+    return this.http.get(`http://localhost/GR06_Treesushi/src/API/Controler/Aliment/read.php?id=${id}`)
+}
+readSaveur(id: any){
+    return this.http.get(`http://localhost/GR06_Treesushi/src/API/Controler/Saveur/read.php?id=${id}`)
+}
 
 
   createMenu(data: any) {

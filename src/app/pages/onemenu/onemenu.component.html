@@ -1,47 +1,59 @@
-<div class=" py-20">
 
-    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
-        <div class="relative  ml-32 rounded-xl  shadow-lg">
-            <div class="flex justify-center  " >
-                <img class="  -mt-10	shadow-md rounded-xl " src="../../../assets/ressources/img/menu/fresh-mix.jpg" alt="">
-            </div>
-            <div class="m-8" >
-                <h1  class="titrecardmenu mb-2 text-xl font-semibold tracking-normal text-blue-gray-900 " >ITEM NOM </h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde voluptatibus distinctio quod aliquam iusto error dicta tenetur dignissimos libero. </p>
-                <p>Prix: 24.50 €</p>
-            </div>
+<h1 class="text_menu_container pt-20 pb-4 text-center text-5xl">Détail de la BOX : {{menu?.nom}}</h1>
 
+<div class="bordermenu justify-center text-center flex flex-wrap p-12 rounded-lg border border-black">
+  <div class="container grid grid-cols-2 gap-8 p-12 rounded-xl ">
+    <div class="containermenu relative flex w-full sm:w-full flex-col rounded-xl  text-gray-700 shadow-md transform scale-80">
+        <div class="relative mx-4 -mt-6 overflow-hidden rounded-xl text-white shadow-lg">
+            <img [src]="menu?.img" alt="Menu image" class="w-full h-auto">
+          </div>
+      <div class="p-6">
+        <h5 class="titrecardmenu mb-2 text-xl font-semibold tracking-normal text-blue-gray-900 text-center">
+          {{menu?.nom}}
+        </h5>
+        <p>Pieces: {{menu?.pieces}}</p>
+        <p>Prix: {{menu?.prix}} €</p>
+        <div class="p-6 p-4 pb-4">
+          <button type="button" class="select-none rounded-lg bg-dark py-3 px-6 text-center text-xs font-bold uppercase text-white shadow-md hover:shadow-lg focus:opacity-85 active:opacity-85 disabled:opacity-50">
+            <a routerLink="/menu-choix">Commander</a>
+          </button>
+          
         </div>
-        <div class="relative  mr-32  rounded-xl  shadow-lg">
-            <div class="m-8" >
-                <h1  class="titrecardmenu mb-2 text-xl font-semibold tracking-normal text-blue-gray-900 text-center " >ALIMENTS </h1>
-                <hr>
-                <div class="py-4" >
-                    <p>Liste aliments</p>
-                    <p>Liste aliments</p>
-                    <p>Liste aliments</p>
-                    <p>Liste aliments</p>
-                    <p>Liste aliments</p>
-                    <p>sf</p>
-
-
-                </div>
-                <div class="flex justify-center ">
-                    <button type="button" class="select-none rounded-lg bg-dark py-3 px-6 text-center text-xs font-bold uppercase text-white shadow-md hover:shadow-lg focus:opacity-85 active:opacity-85 disabled:opacity-50">
-                        <a routerLink="/menu-choix">Commander</a>
-                    </button>
-
-                </div>
-
-                  
-
-
-            </div>
-            
-
-            
+      </div>
+    </div>
+    <div class="compo m-8 border rounded" *ngIf="aliments">
+        <h1 class="titrecardmenu mb-2 text-xl font-semibold tracking-normal text-center p-6">
+          Composition
+        </h1>
+        <hr>
+        <div class="py-4 items-center justify-center text-center overflow-x-auto">
+          <table class="table-auto w-full">
+            <tbody class="items-center justify-center">
+              <tr *ngFor="let aliment of aliments">
+                <td class="border px-4 py-2 text-center">{{aliment.nom}}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-    </div> 
-
+      </div>
+   
+  </div>
+  <div class="m-8" *ngIf="saveurs">
     
+<h1 class="text_menu_container pt-20 pb-4 text-center text-5xl"> SAVEURS</h1>
+
+<div class="uppercase py-4 flex space-x-4 text-lg">
+    <ng-container *ngFor="let saveur of saveurs; let isLast=last">
+      <p class="inline">{{saveur.nom}}</p>
+      <p class="inline" *ngIf="!isLast"> | </p>
+    </ng-container>
+  </div>
+  
+  </div>
 </div>
+
+<div class="flex items-center justify-center m-24">
+    <button data-ripple-light="true" type="button" class="txtbutton select-none rounded-lg bg-white text-center align-middle font-sans text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold uppercase text-black shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none w-[112px] sm:w-[100px] md:w-[112px] lg:w-[125px] xl:w-[150px] h-[46px] sm:h-[40px] md:h-[46px] lg:h-[50px] xl:h-[60px] m-0">
+      <a routerLink="/menu">Retour</a>
+    </button>
+  </div>
