@@ -22,10 +22,6 @@ erwan redige pour fe
 
 ## <a name="Livrable1"></a> Livrable L401_1 : Dossier d'analyse 
 
-# SAE 401 GR06 Treesushi : <br> Gestion des commandes d'un restaurant de sushi.
-## Membres du projet : <br> FAUPIN Rémi, MAREGA Erwan, MERLETTI Sacha, SANGERE Darryl
-
-## Livrable L401_1 : Dossier d'analyse 
 
 Une description détaillée du projet. Qu'est-ce que c'est, pourquoi a-t-il été créé, quel problème résout-il ?
 
@@ -90,12 +86,11 @@ Vous pouvez acceder au Trello en cliquant
 
 ## <a name="4"></a> 4) Analyse des besoins de l'application : <br> Diagramme de 'Use Case'
 
-<p align="center">
-   ![Diagramme Use Case](imgreadme/usecase.png)
-</p>
+ ![Diagramme uecase](imgreadme/usecase.png)
 
 ## <a name="5"></a> 5) Diagramme d'activité 
  ![Diagramme D'activité](imgreadme/diagramme%20activite.png)
+
 
 ## <a name="6"></a> 6) Diagramme de classe
  ![Diagramme de classe](imgreadme/diagramme_de_class_.png)
@@ -103,7 +98,6 @@ Vous pouvez acceder au Trello en cliquant
 ## <a name="7"></a> 7) Architecture fonctionnelle de l'application
 
  ![Arcitecture fonctionnel](imgreadme/architecture%20fonctionnelle.png)
-
 
 
 ## Usage 
