@@ -20,6 +20,7 @@ import { VoirCommandeComponent } from './pages/voir-commande/voir-commande.compo
 import { MenuadminComponent } from './pages/menuadmin/menuadmin.component';
 
 
+
 const routes: Routes = [
   { path: '', redirectTo: 'accueil', pathMatch: 'full' },
   { path: 'accueil', component: AccueilComponent },
@@ -40,7 +41,9 @@ const routes: Routes = [
   {path : 'traitement-profil', component: TraitementProfilComponent},
   {path : 'profil-message', component: ProfilTraitementComponent},
   {path : 'voir_commande', component: VoirCommandeComponent },
-{ path : 'menuadmin', component: MenuadminComponent},
+  { path : 'menuadmin', component: MenuadminComponent},
+  
+
   { path: '**', redirectTo: '404' },
 
 ];
