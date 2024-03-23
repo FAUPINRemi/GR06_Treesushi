@@ -10,19 +10,19 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getData() {
-    return this.http.get('https://treesushi-api.000webhostapp.com//API/Controler/Menu/read.php');
+    return this.http.get('https://treesushi-api.000webhostapp.com/API/Controler/Menu/read.php');
   }
 
   
   getOneData(id: any){
-    return this.http.get(`http://localhost/GR06_Treesushi/src/API/Controler/Menu/read_One.php${id}`)
+    return this.http.get(`https://treesushi-api.000webhostapp.com/API/Controler/Menu/read_One.php${id}`)
 
   }
   readAliment(id: any){
-    return this.http.get(`http://localhost/GR06_Treesushi/src/API/Controler/Aliment/read.php?id=${id}`)
+    return this.http.get(`https://treesushi-api.000webhostapp.com/API/Controler/Aliment/read.php?id=${id}`)
 }
 readSaveur(id: any){
-    return this.http.get(`http://localhost/GR06_Treesushi/src/API/Controler/Saveur/read.php?id=${id}`)
+    return this.http.get(`https://treesushi-api.000webhostapp.com/API/Controler/Saveur/read.php?id=${id}`)
 }
 
 
@@ -34,7 +34,7 @@ readSaveur(id: any){
       'Content-Type': 'application/json'
     });
 
-    return this.http.post('https://treesushi-api.000webhostapp.com//API/Controler/Menu/create.php', data, { headers });
+    return this.http.post('https://treesushi-api.000webhostapp.com/API/Controler/Menu/create.php', data, { headers });
   }
 
 
