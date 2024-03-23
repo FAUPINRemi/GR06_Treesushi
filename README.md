@@ -100,9 +100,24 @@ Vous pouvez acceder au Trello en cliquant
  ![Arcitecture fonctionnel](imgreadme/architecture%20fonctionnelle.png)
 
 
-## Usage 
+## Maquette du site web
 
-Instructions for how to use your project.
+
+ ![Maquette](imgreadme/Remi_Erwan_Sacha_Darryl_GR06_maquette-01.png)
+
+ ![Maquette](imgreadme/Remi_Erwan_Sacha_Darryl_GR06_maquette-02.png)
+ ![Maquette](imgreadme/Remi_Erwan_Sacha_Darryl_GR06_maquette-03.png)
+ ![Maquette](imgreadme/Remi_Erwan_Sacha_Darryl_GR06_maquette-04.png)
+ ![Maquette](imgreadme/Remi_Erwan_Sacha_Darryl_GR06_maquette-05.png)
+ ![Maquette](imgreadme/Remi_Erwan_Sacha_Darryl_GR06_maquette-06.png)
+ ![Maquette](imgreadme/Remi_Erwan_Sacha_Darryl_GR06_maquette-07.png)
+ ![Maquette](imgreadme/Remi_Erwan_Sacha_Darryl_GR06_maquette-08.png)
+ ![Maquette](imgreadme/Remi_Erwan_Sacha_Darryl_GR06_maquette-09.png)
+ ![Maquette](imgreadme/Remi_Erwan_Sacha_Darryl_GR06_maquette-10.png)
+ ![Maquette](imgreadme/Remi_Erwan_Sacha_Darryl_GR06_maquette-11.png)
+ ![Maquette](imgreadme/Remi_Erwan_Sacha_Darryl_GR06_maquette-12.png)
+ ![Maquette](imgreadme/Remi_Erwan_Sacha_Darryl_GR06_maquette-13.png)
+ ![Maquette](imgreadme/Remi_Erwan_Sacha_Darryl_GR06_maquette-14.png)
 
 
 
