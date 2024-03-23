@@ -26,8 +26,7 @@ export class TraitementcommandeComponent implements OnInit {
 
   constructor(private dataService: DataService, private router: Router) {
     this.dataService.getData().subscribe(data => {
-      // Not sure if you need this part
-      // this.data = data;
+      
     });
   }
 
