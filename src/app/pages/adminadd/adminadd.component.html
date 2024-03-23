@@ -1,78 +1,84 @@
-<div class="flex justify-center items-center h-screen">
-  <form
-    [formGroup]="menuForm"
-    (ngSubmit)="submit()"
-    class="space-y-4 bg-white p-10 rounded shadow-md"
-  >
-    <label class="block">
-      <span class="text-gray-700">Nom:</span>
-      <input
-        type="text"
-        formControlName="nom"
-        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-      />
-    </label>
-
-    <label class="block">
-      <span class="text-gray-700">Image URL:</span>
-      <input
-        type="text"
-        formControlName="img"
-        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-      />
-    </label>
-
-    <label class="block">
-      <span class="text-gray-700">Pieces:</span>
-      <input
-        type="number"
-        formControlName="pieces"
-        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-      />
-    </label>
-
-    <label class="block">
-      <span class="text-gray-700">Prix:</span>
-      <input
-        type="number"
-        formControlName="prix"
-        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-      />
-    </label>
-
-    <div formArrayName="aliments" class="space-y-2">
-      <label
-        *ngFor="let aliment of aliments; let i = index"
-        class="flex items-center"
-      >
-        <input
-          type="checkbox"
-          [formControlName]="i"
-          class="form-checkbox h-5 w-5 text-blue-600"
-        />
-        <span class="ml-2 text-gray-700">{{ aliment.nom }}</span>
-      </label>
-    </div>
-
-    <div formArrayName="saveurs" class="space-y-2">
-      <label
-        *ngFor="let saveur of saveurs; let i = index"
-        class="flex items-center"
-      >
-        <input
-          type="checkbox"
-          [formControlName]="i"
-          class="form-checkbox h-5 w-5 text-blue-600"
-        />
-        <span class="ml-2 text-gray-700">{{ saveur.nom }}</span>
-      </label>
-    </div>
-
-    <button
-      type="submit"
-      class="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 rounded-md text-white text-sm"
+<div class="flex flex-col justify-between min-h-screen">
+  <!-- Header goes here -->
+  <h1 class="text-center text-2xl font-bold mt-12">Ajout de menu</h1>
+  <div class="flex-grow flex justify-center items-center mt-10 mb-40">
+    <form
+      [formGroup]="menuForm"
+      (ngSubmit)="submit()"
+      class="space-y-4 bg-white p-10 rounded shadow-md"
     >
-      Submit
-    </button>
-  </form>
+      <label class="block">
+        <span class="text-gray-700">Nom:</span>
+        <input
+          type="text"
+          formControlName="nom"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        />
+      </label>
+
+      <label class="block">
+        <span class="text-gray-700">Image URL:</span>
+        <input
+          type="text"
+          formControlName="img"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        />
+      </label>
+
+      <label class="block">
+        <span class="text-gray-700">Pieces:</span>
+        <input
+          type="number"
+          formControlName="pieces"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        />
+      </label>
+
+      <label class="block">
+        <span class="text-gray-700">Prix:</span>
+        <input
+          type="number"
+          formControlName="prix"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        />
+      </label>
+
+      <div formArrayName="aliments" class="space-y-2">
+        <label
+          *ngFor="let aliment of aliments; let i = index"
+          class="flex items-center"
+        >
+          <input
+            type="checkbox"
+            [formControlName]="i"
+            class="form-checkbox h-5 w-5 text-blue-600"
+          />
+          <span class="ml-2 text-gray-700">{{ aliment.nom }}</span>
+        </label>
+      </div>
+
+      <div formArrayName="saveurs" class="space-y-2 mt-20">
+        <label
+          *ngFor="let saveur of saveurs; let i = index"
+          class="flex items-center"
+        >
+          <input
+            type="checkbox"
+            [formControlName]="i"
+            class="form-checkbox h-5 w-5 text-blue-600"
+          />
+          <span class="ml-2 text-gray-700">{{ saveur.nom }}</span>
+        </label>
+      </div>
+
+      <button
+        type="submit"
+        class="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 rounded-md text-white text-sm"
+      >
+        Ajouter
+      </button>
+    </form>
+  </div>
+
+  <!-- Footer goes here -->
 </div>

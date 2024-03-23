@@ -10,14 +10,44 @@ import { DataService } from '../../data.service';
 export class AdminaddComponent implements OnInit {
   menuForm: FormGroup = new FormGroup({});
   aliments = [
-              { id: 1, nom: 'Aliment 1' },
-              { id: 2, nom: 'Aliment 2' },
-              { id: 3, nom: 'Aliment 3' }
+              { id: 1, nom: 'California Saumon Avocat' },
+              { id: 2, nom: 'Sushi Saumon' },
+              { id: 3, nom: 'Spring Avocat Cheese' },
+              {id:4, nom: 'California pacific'},
+              {id:5, nom:'Edamame/Salade de chou'},
+              {id:6, nom:'Maki Salmon Roll'},
+              {id:7, nom:'Spring Saumon Avocat'},
+              {id:8, nom:'Maki Cheese Avocat'},
+              {id:9, nom:'California Thon Cuit Avocat'},
+              {id:10, nom:'Sushi Thon'},
+              {id:11, nom:'California Thon Avocat'},
+              {id:12, nom:'Sando Chicken Katsu'},
+              {id:13, nom:'Sando Salmon Aburi'},
+              {id:14, nom:'Maki Salmon'},
+              {id:15, nom:'California Crevette'},
+              {id:16, nom:'California Chicken Katsu'},
+              {id:18, nom:'Spring tataki Saumon'},
+              {id:19, nom:'Signature Dragon Roll'},
+              {id:20, nom:'California French Touch'},
+              {id:21, nom:'California French salmon'},
+              {id:22, nom:'California Yellowtail Ponzu'},
+              {id:23, nom:"Signature Rock'n Roll"},
+              {id:24, nom:"Sushi Salmon"},
+              {id:24, nom:"Sushi Saumon Tsukudani"},
+
+              
+
             ];
   saveurs = [
-              { id: 1, nom: 'Saveur 1' },
-              { id: 2, nom: 'Saveur 2' },
-              { id: 3, nom: 'Saveur 3' }
+    { id: 1, nom: 'Saumon' },
+    { id: 2, nom: 'Avocat' },
+    { id: 3, nom: 'cheese' },
+    {id:4, nom: 'coriandre'},
+    {id:5, nom:'thon'},
+    {id:6, nom:'viande'},
+    {id:7, nom:'crevette'},
+    {id:8, nom:'spicy'},
+    {id:9, nom:'seriole lalandi'}
 ];
 
   constructor(private fb: FormBuilder, private dataService: DataService) { }
