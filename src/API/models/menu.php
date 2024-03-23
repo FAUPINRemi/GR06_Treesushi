@@ -22,14 +22,12 @@ class Menu
         $this->connexion = $connexion;
     }
 
-    /**
-     * Méthode serveur:POST
-     */
+    
 
     public function create($data)
     {
 
-        // Requête pour insérer le menu
+
         $sql = "INSERT INTO $this->table (nom, pieces, prix, img) VALUES (:nom, :pieces, :prix, :img)";
         $stmt_menu = $this->connexion->prepare($sql);
         $stmt_menu->bindParam(':nom', $data['nom']);
@@ -40,10 +38,8 @@ class Menu
         $stmt_menu->execute();
 
 
-        // Récupération de l'ID du menu inséré
         $menu_id = $this->connexion->lastInsertId();
 
-        // Insérer les aliments spécifiés
         foreach ($data['aliments'] as $alimentId) {
             $sql_insert_aliment = "INSERT INTO contenir (id_aliment, id_menu) VALUES (:id_aliment, :id_menu)";
             $stmt_insert_aliment = $this->connexion->prepare($sql_insert_aliment);
@@ -62,14 +58,12 @@ class Menu
 
 
 
-        return true; // Succès
+        return true; 
 
     }
 
 
-    /**
-     * Méthode serveur:GET
-     */
+    
     public function read() // Méthode pour lire tous les menus
     {
         $sql = " 
@@ -110,24 +104,18 @@ class Menu
         $sql = "SELECT DISTINCT saveur.id, saveur.nom, saveur.quantite FROM menu, commander, saveur WHERE menu.id = commander.id_menu AND saveur.id = commander.id_saveur AND menu.id = :id;";
         $sql2 = " SELECT DISTINCT aliment.id,aliment.nom,aliment.quantite FROM menu, aliment, contenir WHERE menu.id = contenir.id_menu AND aliment.id = contenir.id_aliment AND menu.id = :id;";
         $sql3 = "SELECT DISTINCT menu.id, menu.nom, menu.prix, menu.img, menu.pieces FROM menu WHERE id = :id;";
-        /**
-         *  saveur
-         */
+      
         $stmt = $this->connexion->prepare($sql);
         $stmt->bindParam(':id', $this->id);
         $stmt->execute();
 
-        /**
-         * aliment
-         */
+      
 
         $stmt2 = $this->connexion->prepare($sql2);
         $stmt2->bindParam(':id', $this->id);
         $stmt2->execute();
 
-        /**
-         * menu
-         */
+     
         $stmt3 = $this->connexion->prepare($sql3);
         $stmt3->bindParam(':id', $this->id);
         $stmt3->execute();
@@ -138,9 +126,7 @@ class Menu
 
 
 
-    /**
-     * Méthode serveur:PUT
-     */
+
     public function update()
     {
         $sql = "UPDATE $this->table SET nom = :nom, pieces = :pieces, prix = :prix, img = :img WHERE id = :id";

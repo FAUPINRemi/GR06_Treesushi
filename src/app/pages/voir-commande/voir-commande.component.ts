@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-voir-commande',
   templateUrl: './voir-commande.component.html',
-  styleUrls: ['./voir-commande.component.css'] // Notez que c'est styleUrls au lieu de styleUrl
+  styleUrls: ['./voir-commande.component.css'] 
 })
 export class VoirCommandeComponent implements OnInit {
   
@@ -26,8 +26,7 @@ export class VoirCommandeComponent implements OnInit {
 
   constructor(private dataService: DataService, private router: Router) {
     this.dataService.getData().subscribe(data => {
-      // Not sure if you need this part
-      // this.data = data;
+      
     });
   }
 }

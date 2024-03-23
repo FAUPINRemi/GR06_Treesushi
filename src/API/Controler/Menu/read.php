@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
     $num = $stmt->rowCount();
 
-    $menu_arr = []; // Définir $menu_arr avant la condition
+    $menu_arr = []; 
 
     if ($num > 0) {
         $menu_arr = [];
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                     extract($row);
 
                     $aliment = [
-                        "id" => $id, // Ajouter l'ID de l'aliment
+                        "id" => $id, 
                         "nom" => $aliment_nom,
                         "quantité" => $aliment_quantite
                     ];
@@ -52,12 +52,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                         ];
                     }
 
-                    // Vérifiez si l'aliment est déjà dans le menu. Si ce n'est pas le cas, ajoutez-le.
                     if (!in_array($aliment, $menus[$id]["aliments"])) {
                         $menus[$id]["aliments"][] = $aliment;
                     }
 
-                    // Vérifiez si la saveur est déjà dans le menu. Si ce n'est pas le cas, ajoutez-la.
                     if (!in_array($saveur, $menus[$id]["saveurs"])) {
                         $menus[$id]["saveurs"][] = $saveur;
                     }
