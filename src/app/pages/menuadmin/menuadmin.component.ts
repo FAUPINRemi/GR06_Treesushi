@@ -14,8 +14,12 @@ export class MenuadminComponent {
       this.data = data;
     });
   }
-
-  getQuantity(aliment: any) {
-    return aliment['quantité'];
+  
+  deleteMenu(id: number) {
+    console.log(id)
+    this.dataService.deleteMenu(id).subscribe(() => {
+      this.data = this.data.filter((menu: { id: number; }) => menu.id !== id);
+    });
   }
+  
 }
