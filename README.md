@@ -91,7 +91,7 @@ Vous pouvez acceder au Trello en cliquant
 ## <a name="4"></a> 4) Analyse des besoins de l'application : <br> Diagramme de 'Use Case'
 
 <p align="center">
-   ![Diagramme Use Case](imgreadme/img/usecase.png)
+   ![Diagramme Use Case](imgreadme/usecase.png)
 </p>
 
 ## <a name="5"></a> 5) Diagramme d'activité 
